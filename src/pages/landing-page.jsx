@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { AnimatePresence, easeInOut, motion } from "framer-motion";
+import { AnimatePresence, easeIn, easeOut, motion } from "framer-motion";
 import LandingPageContent from "../components/landing-page-content";
 
 const LandingPage = () => {
@@ -15,7 +15,7 @@ const LandingPage = () => {
         setIsLoaded(true);
         setHasAnimated(false);
         sessionStorage.setItem("hasAnimated", JSON.stringify(true));
-      }, 3000);
+      }, 6500);
       return () => clearTimeout(timer);
     } else {
       setIsLoaded(true);
@@ -34,33 +34,35 @@ const LandingPage = () => {
                   "linear-gradient(-45deg, rgba(20, 170, 80, 0.5), rgba(40, 100, 150, 0.48))",
                   "linear-gradient(-45deg, rgba(40, 100, 150, 0.48), rgba(50, 70, 80, 0.6))",
                   "linear-gradient(-45deg, rgba(50, 70, 80, 0.6), rgba(30, 50, 70, 0.85))",
-                  "linear-gradient(-45deg, rgba(30, 50, 70, 0.85), rgba(30, 50, 70, 0.45))",
-                  "linear-gradient(-45deg, rgba(30, 50, 70, 0.45), rgba(30, 50, 70, 0.25))",
-                  "linear-gradient(-45deg, rgba(30, 50, 70, 0.25), rgba(00, 00, 00, 1))",
+                  "linear-gradient(-45deg, rgba(30, 50, 70, 0.85), rgba(20, 40, 60, 0.6))",
+                  "linear-gradient(-45deg, rgba(20, 40, 60, 0.6), rgba(0, 27, 12, 0.4))",
+                  "linear-gradient(-45deg, rgba(0, 27, 12, 0.4), rgba(0, 27, 12, 0.5))",
+                  "linear-gradient(-45deg, rgba(0, 27, 12, 0.8), rgba(0, 27, 12, 0.9))",
+                  "linear-gradient(-45deg, rgba(0, 27, 12, 1), rgba(0, 0, 0, 1))",
                 ],
               }}
               transition={{
-                delay: 1,
-                duration: 5.5,
+                delay: 0.45,
+                duration: 10,
                 ease: "linear",
               }}
               className="fixed top-0 left-0 bg-black flex items-center justify-center w-full h-full sm:p-0 px-5"
             >
               <motion.img
                 src="/siam-white.png"
-                alt="image of logo"
+                alt="logo"
                 className="w-max h-max"
-                initial={{ opacity: 0, scale: 0.75 }}
+                initial={{ opacity: 0, scale: 0.35 }}
                 animate={{
                   scale: 1,
                   opacity: 1,
-                  ease: easeInOut,
-                  transition: { duration: 1 },
+                  ease: easeOut,
+                  transition: { duration: 2.25 },
                 }}
                 exit={{
                   scale: 6,
                   opacity: 0,
-                  transition: { duration: 1, ease: easeInOut },
+                  transition: { duration: 1.25, ease: easeIn },
                 }}
               />
             </motion.div>
