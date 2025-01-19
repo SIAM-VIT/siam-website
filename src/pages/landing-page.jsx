@@ -1,110 +1,82 @@
-import React from "react";
-import { motion } from "framer-motion";
-import Navbar from "../components/navbar";
-
-const slideInVariants = {
-  hidden: { opacity: 0, x: -150 },
-  visible: { opacity: 1, x: 0 },
-};
-
-const slideInRightVariants = {
-  hidden: { opacity: 0, x: 150 },
-  visible: { opacity: 1, x: 0 },
-};
+import React, { useState, useEffect } from "react";
+import { AnimatePresence, easeIn, easeOut, motion } from "framer-motion";
+import LandingPageContent from "../components/landing-page-content";
 
 const LandingPage = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(
+    JSON.parse(sessionStorage.getItem("hasAnimated")) || false
+  );
+  useEffect(() => {
+    if (!hasAnimated) {
+      sessionStorage.setItem("hasAnimated", JSON.stringify(false));
+      sessionStorage.setItem("hasAnimatedLanding", JSON.stringify(false));
+      const timer = setTimeout(() => {
+        setIsLoaded(true);
+        setHasAnimated(false);
+        sessionStorage.setItem("hasAnimated", JSON.stringify(true));
+      }, 6500);
+      return () => clearTimeout(timer);
+    } else {
+      setIsLoaded(true);
+    }
+  }, [hasAnimated]);
   return (
-    <div className="max-h-screen bg-black poppins overflow-hidden">
-      <Navbar />
-      <section className="w-full flex items-start gap-x-20">
-        <div className="w-[55%]">
-          <motion.h1
-            variants={slideInVariants}
-            initial="hidden"
-            animate="visible"
-            transition={{
-              type: "spring",
-              stiffness: 250,
-              damping: 20,
-              duration: 0.1,
-              delay: 0.2,
-            }}
-            className="uppercase text-[#9cebdb] font-bold text-[64px] ml-12 mb-7 leading-[1.3]"
-          >
-            Society for Industrial & Applied Mathematics
-          </motion.h1>
-          <motion.h2
-            variants={slideInVariants}
-            initial="hidden"
-            animate="visible"
-            transition={{
-              type: "spring",
-              stiffness: 250,
-              damping: 20,
-              duration: 0.1,
-              delay: 0.42,
-            }}
-            className="uppercase font-normal text-[20px] text-[#9cebdb] ml-12 mb-9 tracking-[0.3rem]"
-          >
-            Turning knowledge into power
-          </motion.h2>
-          <motion.button
-            variants={slideInVariants}
-            initial="hidden"
-            animate="visible"
-            transition={{
-              type: "spring",
-              stiffness: 250,
-              damping: 20,
-              duration: 0.1,
-              delay: 0.57,
-            }}
-            className="ml-12 mb-8 uppercase rounded-full py-1.5 px-3 font-bold text-[#f9f9f9] bg-gradient-to-r from-[#4DA8EA] to-[#00D856]"
-          >
-            <span className="[text-shadow:_0_2px_4px_rgb(000_000_000_/0.65)] text-[22px]">
-              2024 highlights
-            </span>
-          </motion.button>
-          <hr className="w-[100vw]" />
-          <motion.p
-            variants={slideInVariants}
-            initial="hidden"
-            animate="visible"
-            transition={{
-              type: "spring",
-              stiffness: 250,
-              damping: 20,
-              duration: 0.1,
-              delay: 0.75,
-            }}
-            className="mt-8 font-bold text-white text-[18px] text-justify ml-12 text-base"
-          >
-            Applied mathematics, computational and data science are essential to
-            moving society forward and solving many of the world’s most pressing
-            questions and problems. SIAM plays a central role in bringing
-            mathematical and computational scientists together, providing a
-            platform and community for this important work.
-          </motion.p>
-        </div>
-        <motion.div
-          variants={slideInRightVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{
-            type: "spring",
-            stiffness: 250,
-            damping: 20,
-            duration: 0.25,
-            delay: 1,
-          }}
-          className="w-[45%]"
-        >
-          <div className="mt-10 ml-6 z-10 rounded-full py-[2.05rem] w-[42rem] h-[42rem] bg-gradient-to-r from-[#4DA8EA] to-[#00D856]">
-            <div className="rounded-full bg-white w-[38rem] h-[38rem] mx-auto"></div>
+    <>
+      <AnimatePresence mode="wait">
+        {!isLoaded && !hasAnimated && (
+          <>
+            <motion.div
+              animate={{
+                background: [
+                  "linear-gradient(-45deg, rgba(0, 0, 0, 1), rgba(30, 50, 70, 0.85))",
+                  "linear-gradient(-45deg, rgba(30, 50, 70, 0.85), rgba(20, 170, 80, 0.5))",
+                  "linear-gradient(-45deg, rgba(20, 170, 80, 0.5), rgba(40, 100, 150, 0.48))",
+                  "linear-gradient(-45deg, rgba(40, 100, 150, 0.48), rgba(50, 70, 80, 0.6))",
+                  "linear-gradient(-45deg, rgba(50, 70, 80, 0.6), rgba(30, 50, 70, 0.85))",
+                  "linear-gradient(-45deg, rgba(30, 50, 70, 0.85), rgba(20, 40, 60, 0.6))",
+                  "linear-gradient(-45deg, rgba(20, 40, 60, 0.6), rgba(0, 27, 12, 0.4))",
+                  "linear-gradient(-45deg, rgba(0, 27, 12, 0.4), rgba(0, 27, 12, 0.5))",
+                  "linear-gradient(-45deg, rgba(0, 27, 12, 0.8), rgba(0, 27, 12, 0.9))",
+                  "linear-gradient(-45deg, rgba(0, 27, 12, 1), rgba(0, 0, 0, 1))",
+                ],
+              }}
+              transition={{
+                delay: 0.45,
+                duration: 10,
+                ease: "linear",
+              }}
+              className="fixed top-0 left-0 bg-black flex items-center justify-center w-full h-full sm:p-0 px-5"
+            >
+              <motion.img
+                src="/siam-white.png"
+                alt="logo"
+                className="w-max h-max"
+                initial={{ opacity: 0, scale: 0.35 }}
+                animate={{
+                  scale: 1,
+                  opacity: 1,
+                  ease: easeOut,
+                  transition: { duration: 2.25 },
+                }}
+                exit={{
+                  scale: 6,
+                  opacity: 0,
+                  transition: { duration: 1.25, ease: easeIn },
+                }}
+              />
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+      <AnimatePresence mode="sync">
+        {isLoaded && (
+          <div className="max-h-screen bg-gradient-to-l from-[#001B0C] via-[#001B0C] to-black poppins overflow-hidden">
+            <LandingPageContent />
           </div>
-        </motion.div>
-      </section>
-    </div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 
