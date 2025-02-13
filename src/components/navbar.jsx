@@ -15,7 +15,7 @@ const Navbar = () => {
           <div className="w-[40%] border-t-[0.5px] border-b-[0.5px] border-white py-5 mr-16">
             <ul className="flex flex-row items-center justify-around">
               <li className="uppercase text-[#9cebdb] text-[28px] font-medium">
-                About us
+                <Link to="/">About us</Link>
               </li>
               <li className="uppercase text-[#9cebdb] text-[28px] font-medium">
                 <Link to="/team-page">Team</Link>
@@ -33,10 +33,10 @@ const Navbar = () => {
           <div className="w-[40%] ml-16 border-t-[0.5px] border-b-[0.5px] border-white py-5">
             <ul className="flex flex-row items-cenetr justify-around">
               <li className="uppercase text-[#9cebdb] text-[28px] font-medium">
-                Events
+                <Link to="/events">Events</Link>
               </li>
               <li className="uppercase text-[#9cebdb] text-[28px] font-medium">
-                Projects
+                <Link to="/projects">Projects</Link>
               </li>
             </ul>
           </div>
@@ -65,9 +65,9 @@ const Navbar = () => {
               <path
                 d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999"
                 stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           ) : (
@@ -82,32 +82,34 @@ const Navbar = () => {
               <path
                 d="M4 5L20 5"
                 stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M4 12L20 12"
                 stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M4 19L20 19"
                 stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           )}
         </button>
         {isOpen && (
           <ul className="poppins uppercase flex flex-col items-center text-center fixed right-3 top-14 mt-2 w-48 bg-black/60 rounded-xl shadow-lg text-white space-y-2">
-            <li className="w-full rounded-xl p-1 bg-gradient-to-r from-[#4DA8EA] to-[#00D856] cursor-pointer">
-              <div className="bg-black text-white p-2 rounded-xl">About us</div>
-            </li>
+            <Link to="/" className="w-full">
+              <li className="w-full rounded-xl p-1 bg-gradient-to-r from-[#4DA8EA] to-[#00D856] cursor-pointer">
+                <div className="bg-black text-white p-2 rounded-xl">About us</div>
+              </li>
+            </Link>
             <hr className="w-4/5" />
             <Link to="/team-page" className="w-full">
               <li className="w-full rounded-xl p-1 bg-gradient-to-r from-[#4DA8EA] to-[#00D856] cursor-pointer">
@@ -115,13 +117,17 @@ const Navbar = () => {
               </li>
             </Link>
             <hr className="w-4/5" />
-            <li className="w-full rounded-xl p-1 bg-gradient-to-r from-[#4DA8EA] to-[#00D856] cursor-pointer">
-              <div className="bg-black text-white p-2 rounded-xl">Events</div>
-            </li>
+            <Link to="/events" className="w-full">
+              <li className="w-full rounded-xl p-1 bg-gradient-to-r from-[#4DA8EA] to-[#00D856] cursor-pointer">
+                <div className="bg-black text-white p-2 rounded-xl">Events</div>
+              </li>
+            </Link>
             <hr className="w-4/5" />
-            <li className="w-full rounded-xl p-1 bg-gradient-to-r from-[#4DA8EA] to-[#00D856] cursor-pointer">
-              <div className="bg-black text-white p-2 rounded-xl">Projects</div>
-            </li>
+            <Link to="/projects" className="w-full">
+              <li className="w-full rounded-xl p-1 bg-gradient-to-r from-[#4DA8EA] to-[#00D856] cursor-pointer">
+                <div className="bg-black text-white p-2 rounded-xl">Projects</div>
+              </li>
+            </Link>
           </ul>
         )}
       </nav>
