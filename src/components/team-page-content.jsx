@@ -2,10 +2,18 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, easeOut } from "framer-motion";
 import { useWindowSize } from "react-use";
-import { isMobile, isDesktop } from "react-device-detect";
 
 const TeamPageContent = () => {
   const [isVisible, setIsVisible] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
   useEffect(() => {
     if (!isVisible) {
       document.body.style.overflow = "hidden";
@@ -160,7 +168,7 @@ const TeamPageContent = () => {
             </div>
           </>
         )}
-        {!isVisible && isDesktop && (
+        {!isVisible && !isMobile && (
           <>
             <motion.div
               key="newPage"
