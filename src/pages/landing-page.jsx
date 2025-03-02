@@ -36,9 +36,9 @@ const LandingPage = () => {
           <span>SIAM-VIT</span>
           <span>SIAM-VIT</span>
           <span>SIAM-VIT</span>
-          <span>SIAM-VIT</span>
-          <span>SIAM-VIT</span>
-          <span>SIAM-VIT</span>
+          <span className="hidden sm:inline">SIAM-VIT</span>
+          <span className="hidden sm:inline">SIAM-VIT</span>
+          <span className="hidden sm:inline">SIAM-VIT</span>
         </div>
         <hr className="relative sm:ml-96 bottom-20 sm:bottom-0 rotate-12 bg-yellow-500 border border-white/35 w-[140vw] h-[35px] opacity-90 z-0" />
         <div className="text-white z-0 -rotate-12 text-[1.8rem] sm:space-x-20 absolute sm:top-[31rem] top-[29rem] sm:w-[100vw] w-[140vw] space-x-5">
@@ -46,9 +46,9 @@ const LandingPage = () => {
           <span>SIAM-VIT</span>
           <span>SIAM-VIT</span>
           <span>SIAM-VIT</span>
-          <span>SIAM-VIT</span>
-          <span>SIAM-VIT</span>
-          <span>SIAM-VIT</span>
+          <span className="hidden sm:inline">SIAM-VIT</span>
+          <span className="hidden sm:inline">SIAM-VIT</span>
+          <span className="hidden sm:inline">SIAM-VIT</span>
         </div>
       </div>
     </>
