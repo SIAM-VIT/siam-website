@@ -2,7 +2,7 @@ import "./App.css";
 import LandingPage from "./pages/landing-page";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TeamPage from "./pages/team-page";
-import Events from "./pages/events";
+import Events from "./pages/Events";
 
 function App() {
   return (
