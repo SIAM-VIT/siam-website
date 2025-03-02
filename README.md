@@ -21,7 +21,7 @@
 - [Contributors](#contributors)
 - [License](#license)
 
-<!-- ABOUT THE PROJECT -->
+
 
 ## Website
 
@@ -36,8 +36,6 @@ SIAM-VIT Website
 This project is built using the following technologies and frameworks:
 
 - [ReactJS](https://react.dev/) (A frameowrk for building user interfaces using JavaScript)
-
-<!-- GETTING STARTED -->
 
 ## Getting Started
 
