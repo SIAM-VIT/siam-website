@@ -30,25 +30,33 @@ const LandingPage = () => {
         <h2 className="z-30 text-white sm:text-[1.5rem] mb-32 text-center text-[1rem]">
           This website is currently under construction.
         </h2>
-        <hr className="relative -mb-10 -rotate-12 bg-yellow-500 border border-white/35 w-[140vw] h-[35px] opacity-90 z-0" />
-        <div className="text-white z-10 rotate-12 text-[1.8rem] sm:space-x-20 sm:w-[100vw] w-[140vw] space-x-5">
-          <span>SIAM-VIT</span>
-          <span>SIAM-VIT</span>
-          <span>SIAM-VIT</span>
-          <span>SIAM-VIT</span>
-          <span className="hidden sm:inline">SIAM-VIT</span>
-          <span className="hidden sm:inline">SIAM-VIT</span>
-          <span className="hidden sm:inline">SIAM-VIT</span>
+        <div className="relative sm:-bottom-5 bottom-0 -rotate-12 bg-yellow-500 border border-white/35 sm:w-[140vw] w-[100vw] h-[35px] opacity-90 z-0">
+          <div className="text-white text-[1.8rem] sm:space-x-20 space-x-32">
+            <span>SIAM-VIT</span>
+            <span>SIAM-VIT</span>
+            <span className="hidden sm:inline">SIAM-VIT</span>
+            <span className="hidden sm:inline">SIAM-VIT</span>
+            <span className="hidden sm:inline">SIAM-VIT</span>
+            <span className="hidden sm:inline">SIAM-VIT</span>
+            <span className="hidden sm:inline">SIAM-VIT</span>
+            <span className="hidden sm:inline">SIAM-VIT</span>
+            <span className="hidden sm:inline">SIAM-VIT</span>
+            <span className="hidden sm:inline">SIAM-VIT</span>
+          </div>
         </div>
-        <hr className="relative sm:ml-96 bottom-20 sm:bottom-0 rotate-12 bg-yellow-500 border border-white/35 w-[140vw] h-[35px] opacity-90 z-0" />
-        <div className="text-white z-0 -rotate-12 text-[1.8rem] sm:space-x-20 absolute sm:top-[31rem] top-[29rem] sm:w-[100vw] w-[140vw] space-x-5">
-          <span>SIAM-VIT</span>
-          <span>SIAM-VIT</span>
-          <span>SIAM-VIT</span>
-          <span>SIAM-VIT</span>
-          <span className="hidden sm:inline">SIAM-VIT</span>
-          <span className="hidden sm:inline">SIAM-VIT</span>
-          <span className="hidden sm:inline">SIAM-VIT</span>
+        <div className="relative sm:ml-96 bottom-10 sm:bottom-0 rotate-12 bg-yellow-500 border border-white/35 sm:w-[140vw] w-[100vw] h-[35px] opacity-90 z-0">
+          <div className="text-white text-[1.8rem] sm:space-x-20 space-x-24">
+            <span>SIAM-VIT</span>
+            <span>SIAM-VIT</span>
+            <span className="hidden sm:inline">SIAM-VIT</span>
+            <span className="hidden sm:inline">SIAM-VIT</span>
+            <span className="hidden sm:inline">SIAM-VIT</span>
+            <span className="hidden sm:inline">SIAM-VIT</span>
+            <span className="hidden sm:inline">SIAM-VIT</span>
+            <span className="hidden sm:inline">SIAM-VIT</span>
+            <span className="hidden sm:inline">SIAM-VIT</span>
+            <span className="hidden sm:inline">SIAM-VIT</span>
+          </div>
         </div>
       </div>
     </>
