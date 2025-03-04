@@ -1,240 +1,194 @@
-
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 import Navbar from "../components/navbar";
 
+const events = [
+  {
+    name: "GRAVITAS",
+    event1: "MATH PREMIER LEAGUE",
+    event2: "EVENT 2",
+  },
+  {
+    name: "RIVIERA",
+    event1: "VIT'S GOT TALENT",
+    event2: "TRIWIZARD TOURNAMENT",
+  },
+  {
+    name: "YANTRA",
+    event1: "EVENT",
+    event2: "EVENT",
+  },
+];
 
 export default function Events() {
+  const controls = useAnimation();
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          controls.start({ opacity: 1, y: 0 });
+        }
+      },
+      { threshold: 0.3 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [controls]);
+
   return (
     <div>
-    <div className="z-[0] absolute w-fit h-fit overflow-hidden bg-gradient-custom">
-      <img src="events-bg.jpeg" alt="event" className="opacity-[0.25]" />
-    </div>
-    <div className="z-[1000] absolute w-full">
-      <Navbar />
-    <div className="flex flex-col  gap-20">
-      <section className="events h-[100vh] flex flex-col sm:flex-row items-center justify-between pl-10">
-        <div className="text-center">
-          <h1 className="uppercase text-white font-bold text-[48px] sm:text-[84px] mb-10 leading-none">
-            DISCOVER
-            <br />
-            OUR EVENTS
-          </h1>
-          <h3 className="text-white text-left text-[24px] sm:text-[36px]">
-            Where Ideas Transform Into Reality
-          </h3>
-        </div>
-        <div>
-          <img src="events-bg-2.jpeg" alt="event2" className="w-5vw h-5vh sm:w-100 sm:h-[80vh] " />
-        </div>
-      </section>
-      <section className="objective h-[100vh] mt-12 relative">
-        <div>
-          <div className="bg-[#9CEBDB] absolute top-0 left-0 h-10 w-10"></div>
-          <div className="bg-[#9CEBDB] absolute top-10 left-10 h-10 w-10"></div>
-          <div className="bg-[#9CEBDB] absolute top-20 left-0 h-80 w-10"></div>
-        </div>
-        <h1 className="uppercase text-center text-white font-bold text-[64px] sm:text-[48px] ml-12 mb-10 leading-none">
-          WHAT WE DO?
-        </h1>
-        <h3 className="text-center text-white font-bold p-5 m-10">
-          SIAM thrives on blending innovation and creativity by organizing
-          diverse events during cultural and tech fests. From interactive
-          workshops and coding challenges to tech exhibitions and fun
-          cultural-themed technical games, we ensure a perfect mix of learning
-          and entertainment. These events cater to enthusiasts of all levels,
-          fostering collaboration, skill development, and a passion for
-          technology in an engaging environment.
-        </h3>
-        <div className="flex flex-col sm:flex-row items-center justify-around ml-8 gap-10 overflow-hidden">
-          <div>
-            <div className="bg-gradient-green rounded-full w-20 h-20 sm:w-40 sm:h-40"></div>
-            <h3 className="text-white text-center italic font-bold mt-10 underline text-[32px] hidden sm:block">
-              GRAVITAS
+      <div className="z-[0] absolute w-fit h-fit overflow-hidden bg-gradient-custom">
+        <motion.img
+          src="events-bg.jpeg"
+          alt="event"
+          className="opacity-[0.25]"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.25 }}
+          transition={{ duration: 1 }}
+        />
+      </div>
+      <div className="z-[1000] absolute w-full">
+        <Navbar />
+        <motion.section
+          className="events h-[100vh] flex flex-col sm:flex-row items-center justify-between pl-10"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <div className="text-center">
+            <h1 className="uppercase text-white font-bold text-[48px] sm:text-[84px] mb-10 leading-none">
+              DISCOVER<br />OUR EVENTS
+            </h1>
+            <h3 className="text-white text-left text-[24px] sm:text-[36px]">
+              Where Ideas Transform Into Reality
             </h3>
           </div>
-          <div>
-            <div className="bg-gradient-green rounded-full w-20 h-20 sm:w-40 sm:h-40"></div>
-            <h3 className="text-white text-center italic font-bold mt-10 underline text-[32px] hidden sm:block">
-              RIVIERA
-            </h3>
-          </div>
-          <div>
-            <div className="bg-gradient-green rounded-full w-20 h-20 sm:w-40 sm:h-40"></div>
-            <h3 className="text-white text-center italic font-bold mt-10 underline text-[32px] hidden sm:block">
-              YANTRA
-            </h3>
-          </div>
-          <div>
-            <div className="bg-[#9CEBDB] absolute bottom-0 right-0 h-10 w-10"></div>
-            <div className="bg-[#9CEBDB] absolute bottom-10 right-10 h-10 w-10"></div>
-            <div className="bg-[#9CEBDB] absolute bottom-20 right-0 h-80 w-10"></div>
-          </div>
-        </div>
-      </section>
-      <section className="gravitas relative mt-12">
-        <div className="h-screen bg-gradient-custom text-white font-bold font-poppins flex flex-col sm:flex-row md:flex-row">
-          {/* Left Section */}
-          <div className="lg:w-2/5 sm:w-1/2 flex flex-col justify-center relative">
-            <h1 className="uppercase font-bold text-[64px] sm:text-[48px] ml-12 mb-10 leading-none">
-              Gravitas
-            </h1>
-            <div className="relative w-80 h-60">
-              <div className="bg-gradient-green w-full h-[40%]"></div>
-              <img
-                src="circle.svg"
-                className="absolute top-5 left-12 transform -translate-x-1/2 -translate-y-1 "
-              />
-              <svg
-                width="100%"
-                height="80%"
-                viewBox="0 0 62 357"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="absolute top-10 left-12  transform -translate-x-1/2 -translate-y-1"
+          <motion.img
+            src="events-bg-2.jpeg"
+            alt="event2"
+            className="w-5vw h-5vh sm:w-100 sm:h-[80vh]"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1 }}
+          />
+        </motion.section>
+
+        <section className="objective h-[100vh] mt-12 relative" ref={ref}>
+          <motion.h1
+            className="uppercase text-center text-white font-bold text-[64px] sm:text-[48px] ml-12 mb-10 leading-none"
+            initial={{ opacity: 0, y: 50 }}
+            animate={controls}
+            transition={{ duration: 1 }}
+          >
+            WHAT WE DO?
+          </motion.h1>
+          <motion.h3
+            className="text-center text-white font-bold p-5 m-10"
+            initial={{ opacity: 0, y: 50 }}
+            animate={controls}
+            transition={{ duration: 1, delay: 0.2 }}
+          >
+            SIAM thrives on blending innovation and creativity by organizing diverse events during cultural and tech fests. From interactive workshops and coding challenges to tech exhibitions and fun cultural-themed technical games, we ensure a perfect mix of learning and entertainment. These events cater to enthusiasts of all levels, fostering collaboration, skill development, and a passion for technology in an engaging environment.
+          </motion.h3>
+          <motion.div
+            className="flex flex-col sm:flex-row items-center justify-around ml-8 gap-10 overflow-hidden mt-12"
+            initial={{ opacity: 0, y: 50 }}
+            animate={controls}
+            transition={{ duration: 1, delay: 0.4 }}
+          >
+            {["GRAVITAS", "RIVIERA", "YANTRA"].map((event, index) => (
+              <motion.div
+                key={event}
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1, delay: index * 0.2 }}
               >
-                <path
-                  d="M26.3338 6.0289C26.438 2.91134 28.9181 0.262752 32.1556 0.291452C35.3833 0.31562 37.9992 2.9891 37.895 6.10665L36.5765 301.926L61.1689 302.019L30.6512 356.973L0.531588 301.678L25.0163 301.847L26.3338 6.0289Z"
-                  fill="#9CEBDB"
-                />
-              </svg>
-            </div>
-          </div>
-          <div className="lg:w-3/5 sm:w-1/2 mr-10 h-full grid grid-cols-2 grid-rows-2 justify-items-center content-center ">
-            <div className="flex justify-center items-center">
-              <img
-                src="placeholder.png"
-                alt="Placeholder"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="flex justify-center items-center">
-              <p className="text-center text-[16px] sm:text-[36px]">MATH PREMIER LEAGUE</p>
-            </div>
-            <div className="flex justify-center items-center">
-              <p className="text-center text-[16px] sm:text-[36px]">EVENTS 2</p>
-            </div>
-            <div className="bg-gradient-green h-[8%] w-[10%] absolute right-2 block sm:hidden"></div>
-            <div className="flex justify-center items-center">
-              <img
-                src="placeholder.png"
-                alt="Placeholder"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-          <div className="bg-gradient-green absolute bottom-0 lg:right-2 sm:right-2 h-[10vw] w-[10vw]"></div>
-        </div>
-      </section>
-      <section className="riviera relative">
-        <div className="h-screen bg-gradient-custom text-white font-bold font-poppins flex flex-col sm:flex-row md:flex-row">
-          {/* Left Section */}
-          <div className="lg:w-2/5 sm:w-1/2 flex flex-col justify-center relative">
-            <h1 className="uppercase font-bold text-[64px] sm:text-[48px] ml-12 mb-10 leading-none">
-              Riviera
-            </h1>
-            <div className="relative w-80 h-60">
-              <div className="bg-gradient-green w-full h-[40%]"></div>
-              <img
-                src="circle.svg"
-                className="absolute top-5 left-12 transform -translate-x-1/2 -translate-y-1 "
-              />
-              <svg
-                width="100%"
-                height="80%"
-                viewBox="0 0 62 357"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="absolute top-10 left-12  transform -translate-x-1/2 -translate-y-1"
-              >
-                <path
-                  d="M26.3338 6.0289C26.438 2.91134 28.9181 0.262752 32.1556 0.291452C35.3833 0.31562 37.9992 2.9891 37.895 6.10665L36.5765 301.926L61.1689 302.019L30.6512 356.973L0.531588 301.678L25.0163 301.847L26.3338 6.0289Z"
-                  fill="#9CEBDB"
-                />
-              </svg>
-            </div>
-          </div>
-          <div className="lg:w-3/5 sm:w-1/2 mr-10 h-full grid grid-cols-2 grid-rows-2 justify-items-center content-center ">
-            <div className="flex justify-center items-center">
-              <img
-                src="placeholder.png"
-                alt="Placeholder"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="bg-gradient-green h-[8%] w-[10%] absolute right-2 block sm:hidden"></div>
-            <div className="flex justify-center items-center">
-              <p className="text-center text-[16px] sm:text-[36px]">VIT'S GOT TALENT</p>
-            </div>
-            <div className="flex justify-center items-center">
-              <p className="text-center text-[16px] sm:text-[36px]">TRIWIZARD TOURNAMENT</p>
-            </div>
-            <div className="flex justify-center items-center">
-              <img
-                src="placeholder.png"
-                alt="Placeholder"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-          <div className="bg-gradient-green absolute bottom-0 lg:right-2 sm:right-2 h-[10vw] w-[10vw]"></div>
-        </div>
-      </section>
-      <section className="yantra relative">
-        <div className="h-screen bg-gradient-custom text-white font-bold font-poppins flex flex-col sm:flex-row md:flex-row">
-          {/* Left Section */}
-          <div className="lg:w-2/5 sm:w-1/2 flex flex-col justify-center relative">
-            <h1 className="uppercase font-bold text-[64px] sm:text-[48px] ml-12 mb-10 leading-none">
-              Yantra
-            </h1>
-            <div className="relative w-80 h-60">
-              <div className="bg-gradient-green w-full h-[40%]"></div>
-              <img
-                src="circle.svg"
-                className="absolute top-5 left-12 transform -translate-x-1/2 -translate-y-1 "
-              />
-              <svg
-                width="100%"
-                height="80%"
-                viewBox="0 0 62 357"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="absolute top-10 left-12  transform -translate-x-1/2 -translate-y-1"
-              >
-                <path
-                  d="M26.3338 6.0289C26.438 2.91134 28.9181 0.262752 32.1556 0.291452C35.3833 0.31562 37.9992 2.9891 37.895 6.10665L36.5765 301.926L61.1689 302.019L30.6512 356.973L0.531588 301.678L25.0163 301.847L26.3338 6.0289Z"
-                  fill="#9CEBDB"
-                />
-              </svg>
-            </div>
-          </div>
-          <div className="lg:w-3/5 sm:w-1/2 mr-10 h-full grid grid-cols-2 grid-rows-2 justify-items-center content-center ">
-            <div className="bg-gradient-green h-[8%] w-[10%] absolute right-2 block sm:hidden"></div>
-            <div className="flex justify-center items-center">
-              <img
-                src="placeholder.png"
-                alt="Placeholder"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="flex justify-center items-center">
-              <p className="text-center text-[16px] sm:text-[36px]">EVENT 2</p>
-            </div>
-            <div className="flex justify-center items-center">
-              <p className="text-center text-[16px] sm:text-[36px]">EVENT 2</p>
-            </div>
-            <div className="flex justify-center items-center">
-              <img
-                src="placeholder.png"
-                alt="Placeholder"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-          <div className="bg-gradient-green absolute bottom-0 lg:right-2 sm:right-2 h-[10vw] w-[10vw]"></div>
-        </div>
-      </section>
-    </div>
-    </div>
+                <div className="bg-gradient-green rounded-full w-20 h-20 sm:w-40 sm:h-40"></div>
+                <h3 className="text-white text-center italic font-bold mt-10 underline text-[32px] hidden sm:block">
+                  {event}
+                </h3>
+              </motion.div>
+            ))}
+          </motion.div>
+        </section>
+
+
+        {events.map((event, index) => (
+          <motion.section
+            key={event.name}
+            className="relative mt-12"
+            initial={{ opacity: 0, y: 50 }}
+            animate={controls}
+            transition={{ duration: 1, delay: 1 }}
+          >
+            <motion.div
+              className="h-screen bg-gradient-custom text-white font-bold font-poppins flex flex-col sm:flex-row md:flex-row"
+              initial={{ opacity: 0, y: 50 }}
+              animate={controls}
+              transition={{ duration: 1, delay: 0.8 }}
+            >
+              <div className="lg:w-2/5 sm:w-1/2 flex flex-col justify-center relative">
+                <h1 className="uppercase font-bold text-[64px] sm:text-[48px] ml-12 mb-10 leading-none">
+                  {event.name}
+                </h1>
+                <div className="relative w-80 h-60">
+                  <div className="bg-gradient-green w-full h-[40%]"></div>
+                  <img
+                    src="circle.svg"
+                    className="absolute top-5 left-12 transform -translate-x-1/2 -translate-y-1"
+                    alt="decorative circle"
+                  />
+                  <svg
+                    width="100%"
+                    height="80%"
+                    viewBox="0 0 62 357"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="absolute top-10 left-12 transform -translate-x-1/2 -translate-y-1"
+                  >
+                    <path
+                      d="M26.3338 6.0289C26.438 2.91134 28.9181 0.262752 32.1556 0.291452C35.3833 0.31562 37.9992 2.9891 37.895 6.10665L36.5765 301.926L61.1689 302.019L30.6512 356.973L0.531588 301.678L25.0163 301.847L26.3338 6.0289Z"
+                      fill="#9CEBDB"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div className="lg:w-3/5 sm:w-1/2 mr-10 h-full grid grid-cols-2 grid-rows-2 justify-items-center content-center">
+                <div className="flex justify-center items-center">
+                  <img
+                    src="placeholder.png"
+                    alt="Placeholder"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex justify-center items-center">
+                  <p className="text-center text-[16px] sm:text-[36px]">
+                    {event.event1}
+                  </p>
+                </div>
+                <div className="flex justify-center items-center">
+                  <p className="text-center text-[16px] sm:text-[36px]">
+                    {event.event2}
+                  </p>
+                </div>
+                <div className="bg-gradient-green h-[8%] w-[10%] absolute right-2 block sm:hidden"></div>
+                <div className="flex justify-center items-center">
+                  <img
+                    src="placeholder.png"
+                    alt="Placeholder"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <div className="bg-gradient-green absolute bottom-0 lg:right-2 sm:right-2 h-[10vw] w-[10vw]"></div>
+            </motion.div>
+          </motion.section>
+        ))}
+      </div>
     </div>
   );
 }
