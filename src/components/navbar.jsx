@@ -36,7 +36,7 @@ const Navbar = () => {
                 <Link to="/events">Events</Link>
               </li>
               <li className="uppercase text-[#9cebdb] text-[28px] font-medium">
-                <Link to="/projects">Projects</Link>
+                <Link to="/domains">Domains</Link>
               </li>
             </ul>
           </div>
@@ -107,7 +107,9 @@ const Navbar = () => {
           <ul className="poppins uppercase flex flex-col items-center text-center fixed right-3 top-14 mt-2 w-48 bg-black/60 rounded-xl shadow-lg text-white space-y-2">
             <Link to="/" className="w-full">
               <li className="w-full rounded-xl p-1 bg-gradient-to-r from-[#4DA8EA] to-[#00D856] cursor-pointer">
-                <div className="bg-black text-white p-2 rounded-xl">About us</div>
+                <div className="bg-black text-white p-2 rounded-xl">
+                  About us
+                </div>
               </li>
             </Link>
             <hr className="w-4/5" />
@@ -123,9 +125,11 @@ const Navbar = () => {
               </li>
             </Link>
             <hr className="w-4/5" />
-            <Link to="/projects" className="w-full">
+            <Link to="/domains" className="w-full">
               <li className="w-full rounded-xl p-1 bg-gradient-to-r from-[#4DA8EA] to-[#00D856] cursor-pointer">
-                <div className="bg-black text-white p-2 rounded-xl">Projects</div>
+                <div className="bg-black text-white p-2 rounded-xl">
+                  Domains
+                </div>
               </li>
             </Link>
           </ul>
