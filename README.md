@@ -29,7 +29,7 @@ https://siamvit.com
 
 ## About The Project
 
-SIAM-VIT Website
+SIAM-VIT Official Website
 
 ### Built With
 
