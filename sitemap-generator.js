@@ -18,5 +18,9 @@ sitemapStream.end();
 
 streamToPromise(sitemapStream)
   .then((data) => fs.writeFileSync("./public/sitemap.xml", data.toString()))
-  .then(() => console.log("✅ Sitemap generated successfully!"))
+  .then(() =>
+    console.log(
+      "✅ Sitemap generated successfully at https://siamvit.com/sitemap.xml"
+    )
+  )
   .catch((err) => console.error("❌ Sitemap generation failed:", err));
