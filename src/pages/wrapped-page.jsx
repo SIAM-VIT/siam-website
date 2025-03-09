@@ -455,7 +455,7 @@ const WrappedPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.5, ease: easeInOut }}
               exit={{ opacity: 0, y: 20 }}
-              className="sm:text-[6rem] text-[3.5rem] font-[700]"
+              className="z-50 sm:text-[6rem] text-[3.5rem] font-[700]"
             >
               SIAM
             </motion.span>
@@ -468,7 +468,7 @@ const WrappedPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.65, ease: easeInOut }}
               exit={{ opacity: 0, y: 30 }}
-              className="sm:text-[7rem] text-[4.5rem] font-[700]"
+              className="z-50 sm:text-[7rem] text-[4.5rem] font-[700]"
             >
               2024
             </motion.span>
@@ -481,7 +481,7 @@ const WrappedPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.85, ease: easeInOut }}
               exit={{ opacity: 0, y: 40 }}
-              className="sm:text-[6rem] text-[3.5rem] font-[700]"
+              className="z-50 sm:text-[6rem] text-[3.5rem] font-[700]"
             >
               Wrapped
             </motion.span>
@@ -565,7 +565,7 @@ const WrappedPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3, ease: easeInOut }}
               exit={{ opacity: 0, y: 20 }}
-              className="sm:text-[5.5rem] text-[4.5rem] font-[700]"
+              className="z-50 sm:text-[5.5rem] text-[4.5rem] font-[700]"
             >
               360
             </motion.span>
@@ -578,7 +578,7 @@ const WrappedPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.5, ease: easeInOut }}
               exit={{ opacity: 0, y: 30 }}
-              className="sm:text-[3.5rem] text-[3rem] font-[700] text-center"
+              className="z-50 sm:text-[3.5rem] text-[3rem] font-[700] text-center"
             >
               Students participated
             </motion.span>
@@ -591,7 +591,7 @@ const WrappedPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.7, ease: easeInOut }}
               exit={{ opacity: 0, y: 40 }}
-              className="sm:text-[3.5rem] text-[3rem] font-[700] text-center"
+              className="z-50 sm:text-[3.5rem] text-[3rem] font-[700] text-center"
             >
               in our events in Riviera'24
             </motion.span>
@@ -1108,6 +1108,7 @@ const WrappedPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 1.2, ease: easeInOut }}
               exit={{ opacity: 0, y: -30 }}
+              className="z-50"
             >
               <Link to="/">
                 <button className="mb-7 sm:mt-10 mt-5 uppercase rounded-full sm:py-1.5 py-1 sm:px-3 px-2.5 font-bold text-[#f9f9f9] bg-gradient-to-r from-[#1CBAFF] via-[#4f76f5] to-[#6366FD] shadow-[0px_4px_51px_#6564FD]">

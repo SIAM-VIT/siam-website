@@ -88,7 +88,7 @@ const DomainsPageContent = () => {
           className="overflow-hidden w-4/5 pb-6 rounded-[20px]"
         >
           <motion.div
-            className="flex sm:ml-0 ml-[1.65rem] sm:gap-5 gap-14"
+            className="flex sm:ml-0 ml-[1.9rem] sm:gap-5 gap-14"
             ref={dragRef}
             drag={isMobile ? "x" : false}
             dragMomentum={false}
