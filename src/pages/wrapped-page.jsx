@@ -356,7 +356,7 @@ const images12 = [
   },
 ];
 
-const Wrapped = () => {
+const WrappedPage = () => {
   const [currentPart, setCurrentPart] = useState(1);
   const [isPaused, setIsPaused] = useState(false);
   const timerRef = useRef(null);
@@ -394,6 +394,18 @@ const Wrapped = () => {
 
   const handleTouchEnd = () => {
     handleMouseLeave();
+  };
+
+  const handlePrev = () => {
+    if (currentPart > 1) {
+      setCurrentPart(currentPart - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentPart < 7) {
+      setCurrentPart(currentPart + 1);
+    }
   };
 
   return (
@@ -443,7 +455,7 @@ const Wrapped = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.5, ease: easeInOut }}
               exit={{ opacity: 0, y: 20 }}
-              className="sm:text-[6rem] text-[4rem] font-[700]"
+              className="sm:text-[6rem] text-[3.5rem] font-[700]"
             >
               SIAM
             </motion.span>
@@ -456,7 +468,7 @@ const Wrapped = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.65, ease: easeInOut }}
               exit={{ opacity: 0, y: 30 }}
-              className="sm:text-[7rem] text-[5rem] font-[700]"
+              className="sm:text-[7rem] text-[4.5rem] font-[700]"
             >
               2024
             </motion.span>
@@ -469,7 +481,7 @@ const Wrapped = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.85, ease: easeInOut }}
               exit={{ opacity: 0, y: 40 }}
-              className="sm:text-[6rem] text-[4rem] font-[700]"
+              className="sm:text-[6rem] text-[3.5rem] font-[700]"
             >
               Wrapped
             </motion.span>
@@ -504,10 +516,24 @@ const Wrapped = () => {
               />
             ))}
             {isPaused && (
-              <div className="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
+              <div className="z-50 absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
                 Paused
               </div>
             )}
+            <button
+              className="z-50 absolute bottom-4 left-4 bg-white text-black text-xl px-3 py-1 rounded-full"
+              onClick={handlePrev}
+              disabled={currentPart === 1}
+            >
+              Previous
+            </button>
+            <button
+              className="z-50 absolute bottom-4 right-4 bg-white text-black text-xl px-3 py-1 rounded-full"
+              onClick={handleNext}
+              disabled={currentPart === 7}
+            >
+              Next
+            </button>
           </div>
         ) : currentPart === 2 ? (
           <div
@@ -586,10 +612,24 @@ const Wrapped = () => {
               />
             ))}
             {isPaused && (
-              <div className="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
+              <div className="z-50 absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
                 Paused
               </div>
             )}
+            <button
+              className="z-50 absolute bottom-4 left-4 bg-white text-black text-xl px-3 py-1 rounded-full"
+              onClick={handlePrev}
+              disabled={currentPart === 1}
+            >
+              Previous
+            </button>
+            <button
+              className="z-50 absolute bottom-4 right-4 bg-white text-black text-xl px-3 py-1 rounded-full"
+              onClick={handleNext}
+              disabled={currentPart === 7}
+            >
+              Next
+            </button>
           </div>
         ) : currentPart === 3 ? (
           <div
@@ -669,10 +709,24 @@ const Wrapped = () => {
               />
             ))}
             {isPaused && (
-              <div className="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
+              <div className="z-50 absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
                 Paused
               </div>
             )}
+            <button
+              className="z-50 absolute bottom-4 left-4 bg-white text-black text-xl px-3 py-1 rounded-full"
+              onClick={handlePrev}
+              disabled={currentPart === 1}
+            >
+              Previous
+            </button>
+            <button
+              className="z-50 absolute bottom-4 right-4 bg-white text-black text-xl px-3 py-1 rounded-full"
+              onClick={handleNext}
+              disabled={currentPart === 7}
+            >
+              Next
+            </button>
           </div>
         ) : currentPart === 4 ? (
           <div
@@ -753,10 +807,24 @@ const Wrapped = () => {
               />
             ))}
             {isPaused && (
-              <div className="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
+              <div className="z-50 absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
                 Paused
               </div>
             )}
+            <button
+              className="z-50 absolute bottom-4 left-4 bg-white text-black text-xl px-3 py-1 rounded-full"
+              onClick={handlePrev}
+              disabled={currentPart === 1}
+            >
+              Previous
+            </button>
+            <button
+              className="z-50 absolute bottom-4 right-4 bg-white text-black text-xl px-3 py-1 rounded-full"
+              onClick={handleNext}
+              disabled={currentPart === 7}
+            >
+              Next
+            </button>
           </div>
         ) : currentPart === 5 ? (
           <div
@@ -867,10 +935,24 @@ const Wrapped = () => {
               />
             ))}
             {isPaused && (
-              <div className="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
+              <div className="z-50 absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
                 Paused
               </div>
             )}
+            <button
+              className="z-50 absolute bottom-4 left-4 bg-white text-black text-xl px-3 py-1 rounded-full"
+              onClick={handlePrev}
+              disabled={currentPart === 1}
+            >
+              Previous
+            </button>
+            <button
+              className="z-50 absolute bottom-4 right-4 bg-white text-black text-xl px-3 py-1 rounded-full"
+              onClick={handleNext}
+              disabled={currentPart === 7}
+            >
+              Next
+            </button>
           </div>
         ) : currentPart === 6 ? (
           <div
@@ -949,10 +1031,24 @@ const Wrapped = () => {
               />
             ))}
             {isPaused && (
-              <div className="absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
+              <div className="z-50 absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
                 Paused
               </div>
             )}
+            <button
+              className="z-50 absolute bottom-4 left-4 bg-white text-black text-xl px-3 py-1 rounded-full"
+              onClick={handlePrev}
+              disabled={currentPart === 1}
+            >
+              Previous
+            </button>
+            <button
+              className="z-50 absolute bottom-4 right-4 bg-white text-black text-xl px-3 py-1 rounded-full"
+              onClick={handleNext}
+              disabled={currentPart === 7}
+            >
+              Next
+            </button>
           </div>
         ) : currentPart === 7 ? (
           <div
@@ -975,6 +1071,10 @@ const Wrapped = () => {
                   ease: easeInOut,
                   delay: delay,
                 }}
+                exit={{
+                  rotate: rotate - 90,
+                  y: -800,
+                }}
                 className={`fixed bg-gradient-to-r from-[#1CBAFF] via-[#4f76f5] to-[#6366FD] shadow-[0px_4px_51px_#6564FD]`}
                 style={{
                   zIndex: z,
@@ -989,6 +1089,7 @@ const Wrapped = () => {
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3, ease: easeInOut }}
+              exit={{ opacity: 0, y: -30 }}
               className="sm:mt-0 mt-5 sm:text-[7rem] text-[3rem] font-[700] z-40"
             >
               This is us.
@@ -997,6 +1098,7 @@ const Wrapped = () => {
               initial={{ opacity: 0, y: -40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8, ease: easeInOut }}
+              exit={{ opacity: 0, y: -40 }}
               className="sm:text-[7rem] text-[3rem] font-[700] z-40"
             >
               This is SIAM-VIT.
@@ -1005,6 +1107,7 @@ const Wrapped = () => {
               initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 1.2, ease: easeInOut }}
+              exit={{ opacity: 0, y: -30 }}
             >
               <Link to="/">
                 <button className="mb-7 sm:mt-10 mt-5 uppercase rounded-full sm:py-1.5 py-1 sm:px-3 px-2.5 font-bold text-[#f9f9f9] bg-gradient-to-r from-[#1CBAFF] via-[#4f76f5] to-[#6366FD] shadow-[0px_4px_51px_#6564FD]">
@@ -1030,6 +1133,10 @@ const Wrapped = () => {
                   ease: easeInOut,
                   delay: delay,
                 }}
+                exit={{
+                  rotate: rotate + 90,
+                  y: 800,
+                }}
                 className={`fixed bg-gradient-to-r from-[#1CBAFF] via-[#4f76f5] to-[#6366FD] shadow-[0px_4px_51px_#6564FD]`}
                 style={{
                   zIndex: z,
@@ -1040,6 +1147,20 @@ const Wrapped = () => {
                 }}
               />
             ))}
+            <button
+              className="z-50 absolute bottom-4 left-4 bg-white text-black text-xl px-3 py-1 rounded-full"
+              onClick={handlePrev}
+              disabled={currentPart === 1}
+            >
+              Previous
+            </button>
+            <button
+              className="z-50 absolute bottom-4 right-4 bg-white text-black text-xl px-3 py-1 rounded-full"
+              onClick={handleNext}
+              disabled={currentPart === 7}
+            >
+              Next
+            </button>
           </div>
         ) : null}
       </AnimatePresence>
@@ -1047,4 +1168,4 @@ const Wrapped = () => {
   );
 };
 
-export default Wrapped;
+export default WrappedPage;

@@ -5,7 +5,7 @@ import Navbar from "../components/navbar";
 const events = [
   {
     name: "GRAVITAS",
-    event1: "MATH PREMIER LEAGUE",
+    event1: "MPL",
     event2: "EVENT 2",
   },
   {
@@ -52,48 +52,56 @@ export default function Events() {
       <div className="z-[1000] absolute w-full">
         <Navbar />
         <motion.section
-          className="events h-[100vh] flex flex-col sm:flex-row items-center justify-between pl-10"
+          className="min-h-screen flex flex-col sm:flex-row items-center justify-center gap-y-20 pl-10"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <div className="text-center">
-            <h1 className="uppercase text-white font-bold text-[48px] sm:text-[84px] mb-10 leading-none">
-              DISCOVER<br />OUR EVENTS
+          <div className="text-center mr-7 sm:mt-0 -mt-64">
+            <h1 className="uppercase text-white font-bold text-[48px] sm:text-[84px] sm:mb-10 mb-5 leading-none">
+              Discover
+              <br />
+              Our Events
             </h1>
-            <h3 className="text-white text-left text-[24px] sm:text-[36px]">
+            <h3 className="text-white text-[24px] sm:text-[36px]">
               Where Ideas Transform Into Reality
             </h3>
           </div>
           <motion.img
             src="events-bg-2.jpeg"
             alt="event2"
-            className="w-5vw h-5vh sm:w-100 sm:h-[80vh]"
+            className="w-[100vw] sm:w-[100vw] sm:h-[80vh]"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1 }}
           />
         </motion.section>
 
-        <section className="objective h-[100vh] mt-12 relative" ref={ref}>
+        <section className="min-h-screen sm:mt-12 -mt-52 relative" ref={ref}>
           <motion.h1
-            className="uppercase text-center text-white font-bold text-[64px] sm:text-[48px] ml-12 mb-10 leading-none"
+            className="uppercase text-center text-white font-bold text-[64px] sm:text-[68px] sm:ml-12 sm:mb-10 leading-none"
             initial={{ opacity: 0, y: 50 }}
             animate={controls}
             transition={{ duration: 1 }}
           >
-            WHAT WE DO?
+            What we do?
           </motion.h1>
-          <motion.h3
-            className="text-center text-white font-bold p-5 m-10"
+          <motion.h2
+            className="text-center text-white text-xl font-bold p-5 m-10"
             initial={{ opacity: 0, y: 50 }}
             animate={controls}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            SIAM thrives on blending innovation and creativity by organizing diverse events during cultural and tech fests. From interactive workshops and coding challenges to tech exhibitions and fun cultural-themed technical games, we ensure a perfect mix of learning and entertainment. These events cater to enthusiasts of all levels, fostering collaboration, skill development, and a passion for technology in an engaging environment.
-          </motion.h3>
+            SIAM thrives on blending innovation and creativity by organizing
+            diverse events during cultural and tech fests. From interactive
+            workshops and coding challenges to tech exhibitions and fun
+            cultural-themed technical games, we ensure a perfect mix of learning
+            and entertainment. These events cater to enthusiasts of all levels,
+            fostering collaboration, skill development, and a passion for
+            technology in an engaging environment.
+          </motion.h2>
           <motion.div
-            className="flex flex-col sm:flex-row items-center justify-around ml-8 gap-10 overflow-hidden mt-12"
+            className="flex flex-row items-center sm:justify-around justify-center sm:ml-8 gap-10 sm:mt-12 -mt-5"
             initial={{ opacity: 0, y: 50 }}
             animate={controls}
             transition={{ duration: 1, delay: 0.4 }}
@@ -105,8 +113,8 @@ export default function Events() {
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1, delay: index * 0.2 }}
               >
-                <div className="bg-gradient-green rounded-full w-20 h-20 sm:w-40 sm:h-40"></div>
-                <h3 className="text-white text-center italic font-bold mt-10 underline text-[32px] hidden sm:block">
+                <div className="bg-gradient-green transition-all duration-300 hover:shadow-[0px_10px_20px_rgba(255,255,255,0.6)] rounded-full w-20 h-20 sm:w-40 sm:h-40"></div>
+                <h3 className="text-white text-center italic font-bold sm:mt-10 mt-0 underline sm:text-[32px] text-lg">
                   {event}
                 </h3>
               </motion.div>
@@ -114,23 +122,22 @@ export default function Events() {
           </motion.div>
         </section>
 
-
         {events.map((event, index) => (
           <motion.section
-            key={event.name}
-            className="relative mt-12"
+            key={index}
+            className="relative"
             initial={{ opacity: 0, y: 50 }}
             animate={controls}
             transition={{ duration: 1, delay: 1 }}
           >
             <motion.div
-              className="h-screen bg-gradient-custom text-white font-bold font-poppins flex flex-col sm:flex-row md:flex-row"
+              className="h-screen text-white font-bold font-poppins flex flex-col sm:flex-row md:flex-row"
               initial={{ opacity: 0, y: 50 }}
               animate={controls}
               transition={{ duration: 1, delay: 0.8 }}
             >
-              <div className="lg:w-2/5 sm:w-1/2 flex flex-col justify-center relative">
-                <h1 className="uppercase font-bold text-[64px] sm:text-[48px] ml-12 mb-10 leading-none">
+              <div className="lg:w-2/5 sm:w-1/2 flex flex-col justify-center relative text-center">
+                <h1 className="uppercase font-bold text-[64px] sm:text-[68px] sm:ml-12 sm:mb-10 my-5 leading-none">
                   {event.name}
                 </h1>
                 <div className="relative w-80 h-60">
