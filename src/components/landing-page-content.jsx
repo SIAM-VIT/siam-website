@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { easeInOut, motion } from "framer-motion";
 import Navbar from "./navbar";
+import { Link } from "react-router-dom";
 
 const LandingPageContent = () => {
   const [hasAnimatedLanding, setHasAnimatedLanding] = useState(
@@ -43,11 +44,13 @@ const LandingPageContent = () => {
           <h2 className="uppercase font-normal sm:text-[20px] text-[13px] text-[#9cebdb] sm:ml-12 sm:mb-7 ml-6 mb-5 sm:tracking-[0.3rem] tracking-[0.27rem]">
             Turning knowledge into power
           </h2>
-          <button className="sm:ml-12 sm:mb-8 ml-5 mb-4 uppercase rounded-full sm:py-1.5 py-1 sm:px-3 px-2.5 font-bold text-[#f9f9f9] bg-gradient-to-r from-[#4DA8EA] to-[#00D856]">
-            <span className="[text-shadow:_0_2px_4px_rgb(000_000_000_/0.65)] sm:text-[22px] text-[15px]">
-              2024 highlights
-            </span>
-          </button>
+          <Link to="/wrapped">
+            <button className="sm:ml-12 sm:mb-8 ml-5 mb-4 uppercase rounded-full sm:py-1.5 py-1 sm:px-3 px-2.5 font-bold text-[#f9f9f9] bg-gradient-to-r from-[#4DA8EA] to-[#00D856]">
+              <span className="[text-shadow:_0_2px_4px_rgb(000_000_000_/0.65)] sm:text-[22px] text-[15px]">
+                2024 highlights
+              </span>
+            </button>
+          </Link>
           <hr className="w-[100vw] sm:block hidden" />
           <p className="sm:mt-5 sm:font-bold font-light text-white sm:text-[20px] sm:leading-7 text-justify sm:ml-12 sm:px-0 px-5 text-base">
             Applied mathematics, computational and data science are essential to
