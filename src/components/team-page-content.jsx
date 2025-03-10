@@ -371,13 +371,13 @@ const TeamPageContent = () => {
               ease: easeOut,
               delay: 0.1,
             }}
-            className="bg-gradient-to-l from-[#001B0C] via-[#001B0C] to-black poppins relative top-0 h-screen max-w-screen flex flex-col items-center justify-center poppins text-white mx-2"
+            className="overflow-y-scroll bg-gradient-to-l from-[#001B0C] via-[#001B0C] to-black poppins relative mb-[10rem] top-0 h-screen max-w-screen flex flex-col items-center justify-center poppins text-white"
           >
             <div className="pt-20 text-[30px] text-[#9CEBDB] uppercase font-bold">
               <span>Our board members</span>
             </div>
             <div
-              className="overflow-y-auto w-full max-h-screen
+              className="overflow-y-auto w-full mb-8 h-screen
              pt-4 flex flex-row items-center justify-between"
             >
               <div className="h-full w-1/2">
