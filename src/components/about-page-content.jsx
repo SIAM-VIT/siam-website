@@ -15,7 +15,7 @@ const AboutPageContent = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden relative z-10 sm:min-h-screen h-full min-w-screen bg-gradient-to-l from-[#001B0C] via-[#001B0C] to-black poppins flex flex-col justify-center items-center">
+    <div className="overflow-hidden relative z-10 sm:min-h-screen max-h-screen min-w-screen bg-gradient-to-l from-[#001B0C] via-[#001B0C] to-black poppins flex flex-col justify-center items-center">
       <img
         src="group.jpg"
         alt="SIAM members"
@@ -74,7 +74,7 @@ const AboutPageContent = () => {
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: easeInOut, delay: 2.6 }}
-        className="footer absolute bottom-5 z-20 flex flex-col items-center justify-center gap-y-3 text-center font-[600] sm:text-[20px] text-[14px] text-white"
+        className="footer absolute bottom-12 z-20 flex flex-col items-center justify-center gap-y-3 text-center font-[600] sm:text-[20px] text-[14px] text-white"
       >
         <div className="flex items-center justify-center gap-x-10">
           <a

@@ -71,7 +71,7 @@ const LandingPage = () => {
       </AnimatePresence>
       <AnimatePresence mode="sync">
         {isLoaded && (
-          <div className="max-h-screen bg-gradient-to-l from-[#001B0C] via-[#001B0C] to-black poppins overflow-hidden">
+          <div className="min-h-screen bg-gradient-to-l from-[#001B0C] via-[#001B0C] to-black poppins overflow-hidden">
             <LandingPageContent />
           </div>
         )}

@@ -371,12 +371,15 @@ const TeamPageContent = () => {
               ease: easeOut,
               delay: 0.1,
             }}
-            className="bg-gradient-to-l from-[#001B0C] via-[#001B0C] to-black poppins relative max-h-screen max-w-screen flex flex-col items-center justify-center poppins text-white mx-2"
+            className="bg-gradient-to-l from-[#001B0C] via-[#001B0C] to-black poppins relative top-0 h-screen max-w-screen flex flex-col items-center justify-center poppins text-white mx-2"
           >
             <div className="pt-20 text-[30px] text-[#9CEBDB] uppercase font-bold">
               <span>Our board members</span>
             </div>
-            <div className="w-full h-screen overflow-y-auto pt-4 flex flex-row items-center justify-between">
+            <div
+              className="overflow-y-auto w-full max-h-screen
+             pt-4 flex flex-row items-center justify-between"
+            >
               <div className="h-full w-1/2">
                 <div className="flex flex-col items-center w-full h-fit">
                   <button
