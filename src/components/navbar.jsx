@@ -15,10 +15,10 @@ const Navbar = () => {
           <div className="w-[40%] border-t-[0.5px] border-b-[0.5px] border-white py-5 mr-16">
             <ul className="flex flex-row items-center justify-around">
               <li className="uppercase text-[#9cebdb] text-[28px] font-medium">
-                <Link to="/">About us</Link>
+                <Link to="/about">About us</Link>
               </li>
               <li className="uppercase text-[#9cebdb] text-[28px] font-medium">
-                <Link to="/team-page">Team</Link>
+                <Link to="/team">Team</Link>
               </li>
             </ul>
           </div>
@@ -105,7 +105,7 @@ const Navbar = () => {
         </button>
         {isOpen && (
           <ul className="poppins uppercase flex flex-col items-center text-center fixed right-3 top-14 mt-2 w-48 bg-black/60 rounded-xl shadow-lg text-white space-y-2">
-            <Link to="/" className="w-full">
+            <Link to="/about" className="w-full">
               <li className="w-full rounded-xl p-1 bg-gradient-to-r from-[#4DA8EA] to-[#00D856] cursor-pointer">
                 <div className="bg-black text-white p-2 rounded-xl">
                   About us
@@ -113,7 +113,7 @@ const Navbar = () => {
               </li>
             </Link>
             <hr className="w-4/5" />
-            <Link to="/team-page" className="w-full">
+            <Link to="/team" className="w-full">
               <li className="w-full rounded-xl p-1 bg-gradient-to-r from-[#4DA8EA] to-[#00D856] cursor-pointer">
                 <div className="bg-black text-white p-2 rounded-xl">Team</div>
               </li>

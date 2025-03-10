@@ -1,7 +1,7 @@
 <p align="center"><img src="https://imgur.com/Vp4LWt0.png" width=160 title="SIAM-VIT" alt="SIAM-VIT"></a>
 </p>
 <div align="center">
-  <h3 align="center">SIAM Website</h3>
+  <h3 align="center">SIAM-VIT Website</h3>
 
   <p align="center">
     <a href="https://github.com/SIAM-VIT/SIAM-Website/issues">Report Bug</a>
