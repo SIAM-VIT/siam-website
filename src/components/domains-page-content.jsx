@@ -4,6 +4,7 @@ import { easeInOut, motion } from "framer-motion";
 const DomainsPageContent = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.matchMedia("(max-width: 768px)").matches);
@@ -22,7 +23,9 @@ const DomainsPageContent = () => {
   };
 
   const handleNext = () => {
-    setActiveIndex((prev) => Math.min(prev + 1, maxIndex));
+    setActiveIndex((prev) =>
+      Math.min(prev + 1, isMobile ? maxIndexOnPhone : maxIndex)
+    );
   };
 
   const domainInfo = [
@@ -87,7 +90,7 @@ const DomainsPageContent = () => {
           className="overflow-hidden w-4/5 pb-6 rounded-[20px]"
         >
           <motion.div
-            className="flex sm:ml-0 ml-[1.35rem] sm:gap-5 gap-14"
+            className="flex sm:ml-0 ml-[0.75rem] sm:gap-5 gap-14"
             animate={
               isMobile
                 ? {
@@ -157,9 +160,10 @@ const DomainsPageContent = () => {
         >
           <button
             onClick={handleNext}
-            disabled={activeIndex === (isMobile ? maxIndexOnPhone : maxIndex)}
             className={`sm:w-[75px] sm:h-[75px] h-[50px] w-[50px] flex items-center justify-center absolute left-0 top-0 rounded-[15px] sm:rounded-[25px] bg-gradient-to-r from-[#4DA8EA] to-[#00D856] ${
-              activeIndex === maxIndex ? "opacity-50 cursor-not-allowed" : ""
+              activeIndex === (isMobile ? maxIndexOnPhone : maxIndex)
+                ? "opacity-50 cursor-not-allowed"
+                : ""
             }`}
           >
             <svg
@@ -188,7 +192,6 @@ const DomainsPageContent = () => {
         >
           <button
             onClick={handlePrev}
-            disabled={activeIndex === (isMobile ? maxIndexOnPhone : 0)}
             className={`sm:w-[75px] sm:h-[75px] h-[50px] w-[50px] flex items-center justify-center absolute left-0 top-0 rounded-[15px] sm:rounded-[25px] bg-gradient-to-r from-[#4DA8EA] to-[#00D856] ${
               activeIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
             }`}
