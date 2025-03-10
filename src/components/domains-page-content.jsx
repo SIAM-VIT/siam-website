@@ -157,7 +157,7 @@ const DomainsPageContent = () => {
         >
           <button
             onClick={handleNext}
-            disabled={activeIndex === maxIndex}
+            disabled={activeIndex === (isMobile ? maxIndexOnPhone : maxIndex)}
             className={`sm:w-[75px] sm:h-[75px] h-[50px] w-[50px] flex items-center justify-center absolute left-0 top-0 rounded-[15px] sm:rounded-[25px] bg-gradient-to-r from-[#4DA8EA] to-[#00D856] ${
               activeIndex === maxIndex ? "opacity-50 cursor-not-allowed" : ""
             }`}
@@ -188,7 +188,7 @@ const DomainsPageContent = () => {
         >
           <button
             onClick={handlePrev}
-            disabled={activeIndex === 0}
+            disabled={activeIndex === (isMobile ? maxIndexOnPhone : 0)}
             className={`sm:w-[75px] sm:h-[75px] h-[50px] w-[50px] flex items-center justify-center absolute left-0 top-0 rounded-[15px] sm:rounded-[25px] bg-gradient-to-r from-[#4DA8EA] to-[#00D856] ${
               activeIndex === 0 ? "opacity-50 cursor-not-allowed" : ""
             }`}
