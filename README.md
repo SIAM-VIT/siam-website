@@ -79,6 +79,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 ## Contributors
 
 <table>
+	
 	<!-- <tr align="center" style="font-weight:bold">
 		<td>
 		Rishab Nagwani
