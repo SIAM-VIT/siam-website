@@ -42,7 +42,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <nav className="sm:hidden visible w-full flex items-center justify-between px-7 py-4">
+      <nav className="sm:hidden visible w-full flex items-center justify-center gap-x-14 px-3 py-4">
         <Link to="/">
           <img src="siam-white.png" alt="siam logo" width={150} height={150} />
         </Link>

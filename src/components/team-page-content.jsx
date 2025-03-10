@@ -139,7 +139,7 @@ const TeamPageContent = () => {
                     Our team
                   </span>
                 </div>
-                <div className="absolute sm:right-40 right-[13.5rem] sm:bottom-[23.5rem] bottom-[10.5rem]">
+                <div className="absolute sm:right-40 right-[12.75rem] sm:bottom-[23.5rem] bottom-[9rem]">
                   <div className="w-full h-full relative">
                     <button
                       onClick={triggerAnimation}
@@ -371,12 +371,12 @@ const TeamPageContent = () => {
               ease: easeOut,
               delay: 0.1,
             }}
-            className="bg-gradient-to-l from-[#001B0C] via-[#001B0C] to-black poppins relative top-20 max-h-screen max-w-screen flex flex-col items-center justify-center poppins overflow-hidden text-white"
+            className="bg-gradient-to-l from-[#001B0C] via-[#001B0C] to-black poppins relative max-h-screen max-w-screen flex flex-col items-center justify-center poppins text-white mx-2"
           >
-            <div className="text-[32px] text-[#9CEBDB] uppercase font-bold">
+            <div className="pt-20 text-[30px] text-[#9CEBDB] uppercase font-bold">
               <span>Our board members</span>
             </div>
-            <div className="w-full h-full pt-4 flex flex-row items-center justify-between">
+            <div className="w-full h-screen overflow-y-auto pt-4 flex flex-row items-center justify-between">
               <div className="h-full w-1/2">
                 <div className="flex flex-col items-center w-full h-fit">
                   <button
@@ -544,7 +544,7 @@ const TeamPageContent = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0.8, y: height }}
               transition={{ duration: 0.7, ease: "easeInOut" }}
-              className="overflow-auto poppins absolute sm:top-0 -top-14 inset-0 bg-black bg-opacity-[0.865] z-50 flex items-center justify-center"
+              className="overflow-auto poppins absolute sm:top-0 inset-0 bg-black bg-opacity-[0.865] z-50 flex items-center justify-center"
             >
               <div className="mt-0 sm:mt-20 flex flex-col items-center justify-between sm:justify-center bg-transparent h-2/3 w-4/5 z-50 text-center relative">
                 <div className="w-full">
