@@ -4,7 +4,7 @@ import Navbar from "../components/navbar";
 const DomainsPage = () => {
   return (
     <>
-      <div className="z-[999] sm:fixed absolute w-full">
+      <div className="z-[999] absolute w-full">
         <Navbar />
       </div>
       <DomainsPageContent />
