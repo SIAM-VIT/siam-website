@@ -377,7 +377,7 @@ const TeamPageContent = () => {
               <span>Our board members</span>
             </div>
             <div
-              className="overflow-y-auto w-full mb-8 h-screen
+              className="overflow-y-auto w-full mb-[4.5rem] h-screen
              pt-4 flex flex-row items-center justify-between"
             >
               <div className="h-full w-1/2">
