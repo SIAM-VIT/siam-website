@@ -420,43 +420,6 @@ const AboutPageContent = () => {
               />
             </svg>
           </a>
-          <a
-            href="https://medium.com/siam-vit"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              className="sm:border-4 border-[2.5px] border-white rounded-xl p-1 sm:w-[50px] sm:h-[50px] w-[40px] h-[40px]"
-              color="#ffffff"
-              fill="none"
-            >
-              <circle
-                cx="6.5"
-                cy="12"
-                r="4.5"
-                stroke="currentColor"
-                stroke-width="1.5"
-              />
-              <ellipse
-                cx="15.5"
-                cy="12"
-                rx="2.5"
-                ry="4.5"
-                stroke="currentColor"
-                stroke-width="1.5"
-              />
-              <ellipse
-                cx="21"
-                cy="12"
-                rx="1"
-                ry="4.5"
-                stroke="currentColor"
-                stroke-width="1.5"
-              />
-            </svg>
-          </a>
         </div>
         <span className="copyright text-center">
           &copy; {new Date().getFullYear()} SIAM VIT. All rights reserved.
