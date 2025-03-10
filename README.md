@@ -116,3 +116,6 @@ Distributed under the MIT License. See LICENSE for more information.
 	Made with :heart: by SIAM-VIT.
 </p>
 
+## 🔄 Sync Log
+<!-- SYNC-LOG -->
+<!-- SYNC-LOG-END -->
