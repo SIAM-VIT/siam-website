@@ -1,9 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { easeInOut, motion } from "framer-motion";
 
 const DomainsPageContent = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const dragRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const checkMobile = () => {
@@ -76,7 +75,7 @@ const DomainsPageContent = () => {
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.65, ease: easeInOut }}
-        className="text-center font-[700] sm:text-[76px] text-[66px] uppercase text-[#9CEBDB] sm:mt-36 mt-20"
+        className="text-center font-[700] sm:text-[76px] text-[36px] uppercase text-[#9CEBDB] sm:mt-36 mt-20"
       >
         Our domains
       </motion.h1>
@@ -88,11 +87,7 @@ const DomainsPageContent = () => {
           className="overflow-hidden w-4/5 pb-6 rounded-[20px]"
         >
           <motion.div
-            className="flex sm:ml-0 ml-[1.9rem] sm:gap-5 gap-14"
-            ref={dragRef}
-            drag={isMobile ? "x" : false}
-            dragMomentum={false}
-            dragTransition={{ bounceStiffness: 200, bounceDamping: 25 }}
+            className="flex sm:ml-0 ml-[1.35rem] sm:gap-5 gap-14"
             animate={
               isMobile
                 ? {
@@ -103,15 +98,6 @@ const DomainsPageContent = () => {
                   }
             }
             transition={{ type: "spring", stiffness: 200, damping: 30 }}
-            onDragEnd={(event, info) => {
-              const displacement = info.offset.x;
-              const cardWidth = 270 + 56;
-              const changeInIndex = Math.round(displacement / cardWidth);
-              setActiveIndex((prevIndex) => {
-                const newIndex = prevIndex - changeInIndex;
-                return Math.max(0, Math.min(newIndex, maxIndexOnPhone));
-              });
-            }}
           >
             {domainInfo.map((domain, index) => (
               <div
@@ -167,7 +153,7 @@ const DomainsPageContent = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: easeInOut, delay: 0.8 }}
-          className="absolute right-28 bottom-[20.5rem] hidden sm:block"
+          className="absolute sm:right-28 sm:bottom-[20.5rem] bottom-[6.25rem] right-[5.5rem]"
         >
           <button
             onClick={handleNext}
@@ -198,7 +184,7 @@ const DomainsPageContent = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: easeInOut, delay: 0.8 }}
-          className="absolute left-10 bottom-[20.5rem] hidden sm:block"
+          className="absolute sm:left-10 sm:bottom-[20.5rem] bottom-[6.25rem] left-10"
         >
           <button
             onClick={handlePrev}

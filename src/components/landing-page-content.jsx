@@ -38,21 +38,21 @@ const LandingPageContent = () => {
       <Navbar />
       <section className="sm:w-full max-w-screen flex sm:flex-row flex-col items-start gap-x-20">
         <div className="sm:w-[55%] w-full">
-          <h1 className="mt-0 uppercase text-[#9cebdb] font-bold sm:text-[64px] text-[48px] sm:ml-12 sm:mb-3 ml-5 mr-3 mb-6 leading-[1.3]">
+          <h1 className="mt-0 uppercase text-[#9cebdb] font-bold sm:text-[64px] text-[42px] sm:ml-12 sm:mb-3 ml-4 mr-3 mb-2 leading-[1.3]">
             Society for Industrial & Applied Mathematics
           </h1>
-          <h2 className="uppercase font-normal sm:text-[20px] text-[26px] text-[#9cebdb] sm:ml-12 sm:mb-7 sm:px-0 px-5 mb-5 sm:tracking-[0.3rem] tracking-[0.27rem]">
+          <h2 className="uppercase font-normal sm:text-[20px] text-[20px] text-[#9cebdb] sm:ml-12 sm:mb-7 sm:px-0 px-4 mb-4 sm:tracking-[0.3rem] tracking-[0.27rem]">
             Turning knowledge into power
           </h2>
           <Link to="/wrapped">
-            <button className="sm:ml-12 sm:mb-8 ml-5 mb-4 uppercase rounded-full sm:py-1.5 py-1 sm:px-3 px-2.5 font-bold text-[#f9f9f9] bg-gradient-to-r from-[#4DA8EA] to-[#00D856]">
-              <span className="[text-shadow:_0_2px_4px_rgb(000_000_000_/0.65)] sm:text-[22px] text-[20px]">
+            <button className="sm:ml-12 sm:mb-8 ml-4 mb-4 uppercase rounded-full sm:py-1.5 py-1 sm:px-3 px-2.5 font-bold text-[#f9f9f9] bg-gradient-to-r from-[#4DA8EA] to-[#00D856]">
+              <span className="[text-shadow:_0_2px_4px_rgb(000_000_000_/0.65)] sm:text-[22px] text-[18px]">
                 2024 highlights
               </span>
             </button>
           </Link>
           <hr className="w-[100vw] sm:block hidden" />
-          <p className="sm:mt-5 sm:font-bold font-light text-white sm:text-[20px] sm:leading-7 text-justify sm:ml-12 sm:px-0 px-5 text-[18px]">
+          <p className="sm:mt-5 sm:font-bold font-light text-white sm:text-[20px] sm:leading-7 text-left sm:ml-12 sm:px-0 px-5 text-[16px]">
             Applied mathematics, computational and data science are essential to
             moving society forward and solving many of the world’s most pressing
             questions and problems. SIAM plays a central role in bringing
