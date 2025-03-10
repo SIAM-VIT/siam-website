@@ -22,7 +22,6 @@ jobs:
 
       - name: Add upstream remote and fetch
         run: |
-          git remote add upstream https://${GH_PAT}@github.com/SIAM-VIT/SIAM-Website.git
           git fetch upstream
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
