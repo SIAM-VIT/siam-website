@@ -48,7 +48,7 @@ const Navbar = () => {
         </Link>
         <button
           onClick={toggleDropdown}
-          className="flex items-center gap-x-2.5 uppercase rounded-full py-0.5 px-6 font-light text-[#f9f9f9] bg-gradient-to-r from-[#4DA8EA] to-[#00D856]"
+          className="navbarbutton flex items-center gap-x-2.5 uppercase rounded-full py-0.5 px-6 font-light text-[#f9f9f9] bg-gradient-to-r from-[#4DA8EA] to-[#00D856]"
         >
           <span className="[text-shadow:_0_6px_6px_rgb(000_000_000_/0.9)] text-[18px]">
             Menu

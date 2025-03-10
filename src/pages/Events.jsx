@@ -39,7 +39,7 @@ export default function Events() {
 
   return (
     <div>
-      <div className="z-[0] absolute w-fit h-fit overflow-hidden bg-gradient-custom">
+      <div className="bg-gradient-to-l from-[#001B0C] via-[#001B0C] to-black poppins z-[0] absolute w-fit h-fit overflow-hidden">
         <motion.img
           src="events-bg.jpeg"
           alt="event"
