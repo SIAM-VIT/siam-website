@@ -105,7 +105,7 @@ const TeamPageContent = () => {
     (member) => member.name.toLowerCase() === activePerson
   );
   const personImage = boardDetails.map((member) => ({
-    imageUrl: `/${member}.png`,
+    imageUrl: `/${member}.webp`,
   }));
 
   return (
@@ -119,12 +119,12 @@ const TeamPageContent = () => {
             >
               <div className="min-h-screen">
                 <img
-                  src="laptop-image.png"
+                  src="laptop-image.webp"
                   alt="laptop"
                   className="z-0 opacity-[0.07] sm:block hidden"
                 />
                 <img
-                  src="ml-page-1.png"
+                  src="ml-page-1.webp"
                   alt="laptop"
                   className="z-10 sm:hidden visible absolute top-10 min-w-[100vw]"
                 />
@@ -183,7 +183,7 @@ const TeamPageContent = () => {
               className="relative w-fit h-fit min-h-screen poppins overflow-hidden text-white bg-gradient-to-r from-black to-[#001B0C] opacity-[100%]"
             >
               <div className="overflow-hidden w-fit h-fit">
-                <img src="board.png" alt="board" className="opacity-[0.25]" />
+                <img src="board.webp" alt="board" className="opacity-[0.25]" />
               </div>
               <motion.div
                 initial={{ opacity: 1 }}

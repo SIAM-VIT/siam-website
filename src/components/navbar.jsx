@@ -24,7 +24,7 @@ const Navbar = () => {
           </div>
           <Link to="/">
             <img
-              src="siam-white.png"
+              src="siam-white.webp"
               alt="siam logo"
               width={360}
               height={360}
@@ -44,7 +44,7 @@ const Navbar = () => {
       </nav>
       <nav className="sm:hidden visible w-full flex items-center justify-center gap-x-14 px-3 py-4">
         <Link to="/">
-          <img src="siam-white.png" alt="siam logo" width={150} height={150} />
+          <img src="siam-white.webp" alt="siam logo" width={150} height={150} />
         </Link>
         <button
           onClick={toggleDropdown}

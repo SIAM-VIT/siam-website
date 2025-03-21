@@ -48,20 +48,20 @@ const AboutPageContent = () => {
   return (
     <div className="overflow-hidden relative z-10 sm:min-h-screen max-h-screen min-w-screen bg-gradient-to-l from-[#001B0C] via-[#001B0C] to-black poppins flex flex-col justify-center items-center">
       <img
-        src="group.jpg"
+        src="group.webp"
         alt="SIAM members"
         width={width}
         className="opacity-[0.325] sm:absolute sm:-top-14 top-0 z-0 object-contain"
       />
       <hr className="sm:hidden visible border-2 border-white w-full z-0 opacity-[0.325] my-[0.6rem]" />
       <img
-        src="group2.jpg"
+        src="group2.webp"
         alt="SIAM senior core & board members"
         className="opacity-[0.325] z-0 object-contain sm:hidden visible"
       />
       <hr className="sm:hidden visible border-2 border-white w-full z-0 opacity-[0.325] my-[0.6rem]" />
       <img
-        src="group3.jpg"
+        src="group3.webp"
         alt="SIAM senior core & board members"
         className="opacity-[0.325] z-0 object-contain sm:hidden visible"
       />
