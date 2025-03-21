@@ -49,7 +49,7 @@ const LandingPage = () => {
               className="fixed top-0 left-0 bg-black flex items-center justify-center w-full h-full sm:p-0 px-5"
             >
               <motion.img
-                src="/siam-white.png"
+                src="/siam-white.webp"
                 alt="logo"
                 className="w-max h-max"
                 initial={{ opacity: 0, scale: 0.35 }}

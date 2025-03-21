@@ -41,7 +41,7 @@ export default function Events() {
     <div>
       <div className="bg-gradient-to-l from-[#001B0C] via-[#001B0C] to-black poppins z-[0] absolute w-fit h-fit overflow-hidden">
         <motion.img
-          src="events-bg.jpeg"
+          src="events-bg.webp"
           alt="event"
           className="opacity-[0.25]"
           initial={{ opacity: 0 }}
@@ -68,7 +68,7 @@ export default function Events() {
             </h3>
           </div>
           <motion.img
-            src="events-bg-2.jpeg"
+            src="events-bg-2.webp"
             alt="event2"
             className="w-[100vw] sm:w-[100vw] sm:h-[80vh]"
             initial={{ scale: 0.8, opacity: 0 }}

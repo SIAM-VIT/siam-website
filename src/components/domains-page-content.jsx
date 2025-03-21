@@ -33,42 +33,42 @@ const DomainsPageContent = () => {
       title: "Web Dev",
       description:
         "We develop websites and web applications using modern technologies and frameworks.",
-      logo: "/webdev.png",
+      logo: "/webdev.webp",
     },
     {
       title: "App Dev",
       description:
         "We develop mobile applications for Android and iOS using Flutter and React Native.",
-      logo: "/appdev.jpg",
+      logo: "/appdev.webp",
     },
     {
       title: "AI/ML",
       description:
         "We provide resources and guidance for artificial intelligence and machine learning.",
-      logo: "/aiml.jpg",
+      logo: "/aiml.webp",
     },
     {
       title: "Competitive Coding",
       description:
         "We provide resources and guidance for competitive programming.",
-      logo: "/compcoding.png",
+      logo: "/compcoding.webp",
     },
     {
       title: "Design",
       description:
         "We design user interfaces and user experiences for websites and applications.",
-      logo: "/design.png",
+      logo: "/design.webp",
     },
     {
       title: "Content Creation",
       description: "We create reels and after movies for our events.",
-      logo: "/cc.png",
+      logo: "/cc.webp",
     },
     {
       title: "Research and Development",
       description:
         "We provide resources and guidance for research and development.",
-      logo: "/r&d.png",
+      logo: "/r&d.webp",
     },
   ];
 
