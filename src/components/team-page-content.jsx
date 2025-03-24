@@ -4,8 +4,10 @@ import { motion, AnimatePresence, easeOut } from "framer-motion";
 import { useWindowSize } from "react-use";
 
 const TeamPageContent = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isAnimating, setIsAnimating] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+  const [activePerson, setActivePerson] = useState(null);
+  const { height } = useWindowSize();
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.matchMedia("(max-width: 768px)").matches);
@@ -15,20 +17,12 @@ const TeamPageContent = () => {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
   useEffect(() => {
-    if (!isVisible) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    document.body.style.overflow = isAnimating ? "hidden" : "auto";
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [isVisible]);
-  const triggerAnimation = () => {
-    setIsVisible(!isVisible);
-  };
-  const [activePerson, setActivePerson] = useState(null);
-  const { width, height } = useWindowSize();
+  }, [isAnimating]);
+
   const handleClose = () => {
     setActivePerson(null);
   };
@@ -111,75 +105,20 @@ const TeamPageContent = () => {
   return (
     <>
       <AnimatePresence mode="wait">
-        {isVisible && (
-          <>
-            <div
-              key="intro"
-              className="overflow-hidden sm:h-full max-w-screen max-h-screen -z-10 sm:w-full poppins bg-gradient-to-r from-black to-[#001B0C] opacity-[94%] text-[#9cebdb]"
-            >
-              <div className="min-h-screen">
-                <img
-                  src="laptop-image.webp"
-                  alt="laptop"
-                  className="z-0 opacity-[0.07] sm:block hidden"
-                />
-                <img
-                  src="ml-page-1.webp"
-                  alt="laptop"
-                  className="z-10 sm:hidden visible absolute top-10 min-w-[100vw]"
-                />
-              </div>
-              <div className="flex flex-col z-10 absolute w-full h-full sm:w-[100vw] sm:h-[100vh] sm:top-0 -top-32 items-center justify-center">
-                <div className="sm:p-20 p-10 mt-32 z-10 border-[#9cebdb] border-2 sm:w-fit w-max">
-                  <span className="text-[#9cebdb] text-[32px] sm:text-[50px] font-semibold text-center block">
-                    Get To Know
-                  </span>
-                  <br />
-                  <span className="text-[#9cebdb] font-bold text-[50px] sm:text-[125px] uppercase text-center block">
-                    Our team
-                  </span>
-                </div>
-                <div className="absolute sm:right-40 right-[12.75rem] sm:bottom-[23.5rem] bottom-[9rem]">
-                  <div className="w-full h-full relative">
-                    <button
-                      onClick={triggerAnimation}
-                      className="sm:w-[75px] sm:h-[75px] h-[50px] w-[50px] flex items-center justify-center absolute left-0 top-0 rounded-[15px] sm:rounded-[25px] bg-gradient-to-r from-[#4DA8EA] to-[#00D856]"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="85"
-                        height="85"
-                        color="#ffffff"
-                        fill="none"
-                      >
-                        <path
-                          d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
-                          stroke="currentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </>
-        )}
-        {!isVisible && !isMobile && (
+        {!isMobile && (
           <>
             <motion.div
               key="newPage"
-              initial={{ x: width, opacity: 0.65 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: width, opacity: 1 }}
+              initial={{ y: height, opacity: 0.65 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: height, opacity: 1 }}
               transition={{
                 duration: 0.9,
                 ease: easeOut,
                 delay: 0.1,
               }}
+              onAnimationStart={() => setIsAnimating(true)}
+              onAnimationComplete={() => setIsAnimating(false)}
               className="relative w-fit h-fit min-h-screen poppins overflow-hidden text-white bg-gradient-to-r from-black to-[#001B0C] opacity-[100%]"
             >
               <div className="overflow-hidden w-fit h-fit">
@@ -360,17 +299,19 @@ const TeamPageContent = () => {
             </motion.div>
           </>
         )}
-        {!isVisible && isMobile && (
+        {isMobile && (
           <motion.div
             key="newPageMobile"
-            initial={{ x: width, opacity: 0.65 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: width, opacity: 1 }}
+            initial={{ y: height, opacity: 0.65 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: height, opacity: 1 }}
             transition={{
               duration: 0.9,
               ease: easeOut,
               delay: 0.1,
             }}
+            onAnimationStart={() => setIsAnimating(true)}
+            onAnimationComplete={() => setIsAnimating(false)}
             className="overflow-y-scroll bg-gradient-to-l from-[#001B0C] via-[#001B0C] to-black poppins relative mb-[10rem] top-0 h-screen max-w-screen flex flex-col items-center justify-center poppins text-white"
           >
             <div className="pt-20 text-[30px] text-[#9CEBDB] uppercase font-bold">
@@ -547,6 +488,8 @@ const TeamPageContent = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0.8, y: height }}
               transition={{ duration: 0.7, ease: "easeInOut" }}
+              onAnimationStart={() => setIsAnimating(true)}
+              onAnimationComplete={() => setIsAnimating(false)}
               className="overflow-auto poppins absolute sm:top-0 inset-0 bg-black bg-opacity-[0.865] z-50 flex items-center justify-center"
             >
               <div className="mt-0 sm:mt-20 flex flex-col items-center justify-between sm:justify-center bg-transparent h-2/3 w-4/5 z-50 text-center relative">
