@@ -30,45 +30,46 @@ const DomainsPageContent = () => {
 
   const domainInfo = [
     {
-      title: "Web Dev",
+      title: "Web Development",
       description:
-        "We develop websites and web applications using modern technologies and frameworks.",
-      logo: "/webdev.webp",
+        "We specialize in building high-performance web applications, ranging from static single-page websites to dynamic multi-page platforms. Leveraging cutting-edge frameworks and libraries, we ensure seamless interactivity, scalability, and efficiency. You'll gain hands-on experience in developing real-world web applications and contributing to impactful projects with SIAM.",
+      logo: "webdev.webp",
     },
     {
-      title: "App Dev",
+      title: "App Development",
       description:
-        "We develop mobile applications for Android and iOS using Flutter and React Native.",
-      logo: "/appdev.webp",
+        "Our expertise lies in designing and developing scalable, responsive mobile applications tailored for both iOS and Android. Using modern technologies like Flutter, we create seamless cross-platform solutions while focusing on optimized UI/UX and production-level performance. You'll master app structuring, UI design, and performance tuning for real-world applications.",
+      logo: "appdev.webp",
     },
     {
-      title: "AI/ML",
+      title: "Machine Learning",
       description:
-        "We provide resources and guidance for artificial intelligence and machine learning.",
-      logo: "/aiml.webp",
+        "We focus on building intelligent systems by exploring machine learning algorithms, neural networks, and AI-driven applications. We delve into deep learning, reinforcement learning, and generative AI. You'll gain hands-on experience in training and deploying models using TensorFlow, PyTorch, and Scikit-Learn, working on real-world AI solutions.",
+      logo: "aiml.webp",
     },
     {
       title: "Competitive Coding",
       description:
-        "We provide resources and guidance for competitive programming.",
-      logo: "/compcoding.webp",
+        "We provide structured training in problem-solving, data structures, and algorithms through daily LeetCode challenges and competitive programming exercises. We prepare you for placements by strengthening your coding fundamentals, improving algorithmic thinking, and offering curated resources to excel in coding interviews and contests.",
+      logo: "compcoding.webp",
     },
     {
-      title: "Design",
+      title: "Design and UI/UX",
       description:
-        "We design user interfaces and user experiences for websites and applications.",
-      logo: "/design.webp",
+        "We craft visually stunning designs for digital platforms, including social media content, event posters, and promotional banners. Our focus extends to UI/UX design, where you'll learn to create website and app prototypes using Figma. With hands-on experience in tools like Canva and Figma, you'll develop professional-level designs for diverse applications.",
+      logo: "design.webp",
     },
     {
       title: "Content Creation",
-      description: "We create reels and after movies for our events.",
-      logo: "/cc.webp",
+      description:
+        "We specialize in producing engaging and high-quality multimedia content for social media, YouTube, and LinkedIn. This domain covers the entire content creation pipeline, from ideation and scripting to shooting and editing aftermovies and digital campaigns. You'll develop expertise in video production, reel making, and social media branding.",
+      logo: "cc.webp",
     },
     {
       title: "Research and Development",
       description:
-        "We provide resources and guidance for research and development.",
-      logo: "/r&d.webp",
+        "We empower students to initiate and execute impactful research projects by providing guidance on formulating research questions, structuring methodologies, and collaborating with faculty. This domain emphasizes leveraging mathematical modeling, computational techniques, and innovative problem-solving strategies to drive meaningful research advancements.",
+      logo: "r&d.webp",
     },
   ];
 
@@ -105,22 +106,26 @@ const DomainsPageContent = () => {
             {domainInfo.map((domain, index) => (
               <div
                 key={index}
-                className="transition-all duration-300 hover:shadow-[0px_10px_20px_rgba(255,255,255,0.6)] w-[270px] h-[420px] flex-shrink-0 relative bg-gradient-to-r from-[#4DA8EA] to-[#00D856] rounded-[20px]"
+                className="group transition-all duration-1000 hover:shadow-[0px_10px_20px_rgba(255,255,255,0.6)] w-[270px] h-[420px] flex-shrink-0 relative rounded-[20px]"
               >
-                <div className="p-3 text-center w-[255px] h-[405px] absolute top-2 left-2 bg-gradient-to-r from-[#4DA8EA] to-[#00D856] rounded-[20px] border-2 border-black">
-                  <img
-                    src={domain.logo}
-                    alt={`${domain.title} logo`}
-                    width={250}
-                    height={250}
-                    className="rounded-[20px] mb-3"
-                  />
-                  <h1 className="text-3xl font-bold text-center text-white">
-                    {domain.title}
-                  </h1>
-                  <p className="text-[0.9rem] text-center text-black mt-2">
-                    {domain.description}
-                  </p>
+                <div className="relative w-full h-full transition-transform duration-1000 transform-style-preserve-3d group-hover:rotate-y-180">
+                  <div className="absolute w-full h-full bg-gradient-to-r from-[#4DA8EA] to-[#00D856] rounded-[20px] flex flex-col items-center justify-center border-2 border-black backface-hidden">
+                    <img
+                      src={domain.logo}
+                      alt={`${domain.title} logo`}
+                      width={250}
+                      height={250}
+                      className="rounded-[20px] mb-3 -mt-10"
+                    />
+                    <h1 className="text-[2.15rem] font-bold text-center text-white leading-tight">
+                      {domain.title}
+                    </h1>
+                  </div>
+                  <div className="p-5 absolute w-full h-full bg-gradient-to-r from-[#00D856] to-[#4DA8EA] rounded-[20px] flex flex-col items-center justify-center text-white border-2 border-black rotate-y-180 backface-hidden">
+                    <p className="text-[1rem] text-center text-black mt-2">
+                      {domain.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}

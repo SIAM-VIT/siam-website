@@ -41,66 +41,77 @@ const TeamPageContent = () => {
     {
       name: "Aaditya Roshan",
       role: "Chairperson",
-      desc: "blah blah blah",
-      img: "",
+      desc: "A visionary leader with persistent optimism, Aaditya has been the driving force behind our chapter’s growth and success. His ability to bring out the best in people, combined with his sharp wit and approachable nature, makes him an exceptional mentor and guide. A commanding presence, he leads with confidence and purpose—steering the team forward with encouragement. Whether it’s solving challenges, or ensuring that every initiative runs smoothly, he has a knack for getting things done effortlessly. Always ready to help and uplift those around him, Aaditya’s leadership is defined by both efficiency and a genuine commitment to the people he works with.",
+      img: "aaditya roshan.webp",
+      linkedin: "https://www.linkedin.com/in/aaditya-roshan-02a519274/",
     },
     {
       name: "Akshat Gupta",
       role: "Technical Head",
-      desc: "blah blah blah",
-      img: "",
+      desc: "One of the sharpest minds and most passionate tech enthusiasts you'll ever meet, Akshat represents the very best our chapter has to offer. Whether it's coding, backend development, or staying ahead of the latest tech trends, he's always at the forefront, pushing boundaries and innovating. His keen intellect is matched by his approachable and friendly nature, making him not just a brilliant problem-solver but also a great mentor. With a deep love for technology, Akshat is the go-to person for anything tech-related, always ready to share knowledge and spark engaging discussions.",
+      img: "akshat gupta.webp",
       linkedin: "https://www.linkedin.com/in/akshat-gupta-864b39235",
     },
     {
       name: "Harsh Agrawal",
       role: "Vice Chairperson",
-      desc: "blah blah blah",
-      img: "",
+      desc: "Harsh Agrawal is the Vice-Chairperson of SIAM, and he represents persistence, reasonableness, and logic in everything he does. Friendly and approachable, he creates a team-like atmosphere while also remaining acutely problem-solving in nature. He is a sports buff who is an avid fan of football and athletics, which instils in him the competitive nature. In addition to his passion for sports, Harsh also has an interest in developing apps, where he uses his analytical mind to develop creative solutions. His skill in merging leadership, technical know-how, and teamwork makes him a valued and esteemed person in both professional and co-curricular life.",
+      img: "harsh agarwal.webp",
+      linkedin: "https://www.linkedin.com/in/harsh-agrawal-9706a12aa/",
     },
     {
       name: "Kunal Kundnani",
       role: "Design Head",
-      desc: "blah blah blah",
-      img: "",
+      desc: "If SIAM had a face of creativity, it would undoubtedly be Kunal Kundnani! With his amazing design skills, sharp aesthetics and out-of-the-box creativity, he made every project look outstanding. From stunning event posters to stylish social media designs, his work spoke volumes, making SIAM VIT’s visual identity stand out effortlessly. But Kunal wasn’t just about pixels and palettes-he is also the heart of the team! His fun-loving, approachable and ever-helpful nature made working with him an absolute delight. Whether it was brainstorming ideas, guiding juniors or simply cracking jokes to keep the vibe light, he ensured that creativity always flowed without pressure. His efforts and creativity have left a lasting impact and his energy and passion will always be an inspiration.",
+      img: "kunal kundnani.webp",
+      linkedin: "https://www.linkedin.com/in/kunal-kundnani-452288274/",
     },
     {
       name: "Rinika Paramba",
       role: "General Secretary",
-      desc: "blah blah blah",
-      img: "",
+      desc: "Rinika, the name itself exudes confidence, boldness, and an unyielding drive for excellence. She may seem strict at first, but beneath that tough exterior lies a heart of gold. A true pillar of reliability, she’s always there when you need her. With the most unpredictable (and slightly maniacal?) ideas, she brings an energy to SIAM that no one else can match. A force to reckon with, she’s not just a leader but an inspiring mentor, especially in speaking, anchoring, and commanding a stage with finesse. She is the kind of General Secretary every team wishes for!",
+      img: "rinika paramba.webp",
+      linkedin: "https://www.linkedin.com/in/rinika-sujith-paramba-712a41279/",
     },
     {
       name: "Nischitha Shetty",
-      role: "Publicity Head",
-      desc: "blah blah blah",
-      img: "",
+      role: "Projects & Publicity Head",
+      desc: "Nischitha has been playing a crucial role in driving both project execution and outreach, as the Projects & Publicity Head of our chapter. Known for her unwavering focus and efficiency, she approaches every task with a decisive, all-in attitude—getting things done in one go, especially when deadlines are approaching. Her ability to manage multiple initiatives while maintaining quality has left a lasting impact on the chapter’s work. In addition to overseeing projects, she ensures that our initiatives reach a wider audience. As a dedicated leader, she has set a high standard for commitment and excellence.",
+      img: "nischitha shetty.webp",
+      linkedin: "https://www.linkedin.com/in/nischitha-n-shetty-b70756283/",
     },
     {
       name: "Leena Kannan",
       role: "Co-Secretary",
-      desc: "blah blah blah",
-      img: "",
+      desc: "Leena is the backbone of our chapter’s operations, effortlessly balancing event coordination and documentation while keeping everything running like clockwork. As our co-secretary, she ensures that every event is flawlessly executed, reports are precise, and all necessary processes like OD handling are completed on time. Beyond her incredible abilities, Leena is an avid Liverpool supporter and truly appreciates metallic legends like AC/DC, Def Leppard, Jimi Hendrix, Nirvana, and Linkin Park. But what really lights up her world? Animals—she loves interacting with all the cats and dogs she meets. With her efficiency, enthusiasm, and love for both order and chaos, Leena is truly one of a kind!",
+      img: "leena kannan.webp",
+      linkedin: "https://www.linkedin.com/in/leena-kannan-a69459267/",
     },
     {
       name: "Ashutosh Chandra",
-      role: "Creativity Head",
-      desc: "blah blah blah",
-      img: "",
+      role: "Creative Head",
+      desc: "Ashutosh Chandra, our Creative Head at SIAM VIT, is the driving force behind our Instagram magic, event reels, and public presence. With a keen eye for detail and a knack for getting things done, he makes sure every initiative is executed flawlessly and on time. His creative vision brings a unique touch to everything he works on, from brainstorming concepts to final edits. Though he prefers letting his work do the talking, his impact is undeniable. Always behind the scenes, but never unnoticed. His ability to consistently deliver outstanding results makes him an essential part of our team’s success.",
+      img: "ashutosh chandra.webp",
+      linkedin: "https://www.linkedin.com/in/ashutosh-chandra-7b76a92aa/",
     },
     {
       name: "Samarth Shokeen",
       role: "Events Head",
-      desc: "blah blah blah",
-      img: "",
+      desc: "Samarth is the kind of senior who leads effortlessly, making things happen while ensuring everything feels easier. He’s caring and always ready to listen, making sure no one feels unheard. Chill and approachable, yet when needed, he knows when to switch from a friend to a mentor, balancing firmness with understanding. A great basketball player, he carries himself with confidence but never arrogance, always making the game fun. When things get tricky, he steps in with the right mix of support, guidance, and perspective. A senior you respect, not because you have to, but because you genuinely want to.",
+      img: "samarth shokeen.webp",
+      linkedin: "https://www.linkedin.com/in/samarth-shokeen-933a80257/",
     },
-    { name: "Yash Bothra", role: "HR Head", desc: "blah blah blah", img: "" },
+    {
+      name: "Yash Bothra",
+      role: "HR & Finance Head",
+      desc: "A natural leader with a strong commitment to teamwork, Yash is the driving force behind our chapter’s community. He ensures smooth operations by planning, coordinating, and fostering collaboration between the board and core members. Dedicated to creating a professional and inclusive environment, he oversees enrollment, training, and team development while maintaining unity within the core committee. Approachable and insightful, he plays a key role in building a motivated and cohesive team, ensuring everyone works together toward a shared vision.",
+      img: "yash bothra.webp",
+      linkedin: "https://www.linkedin.com/in/yashb1729/",
+    },
   ];
   const person = boardDetails.find(
     (member) => member.name.toLowerCase() === activePerson
   );
-  const personImage = boardDetails.map((member) => ({
-    imageUrl: `/${member}.webp`,
-  }));
 
   return (
     <>
@@ -141,7 +152,13 @@ const TeamPageContent = () => {
                       <button
                         onClick={() => setActivePerson("aaditya roshan")}
                         className="rounded-full bg-[#d9d9d9] w-32 h-32 mb-3"
-                      ></button>
+                      >
+                        <img
+                          src="aaditya roshan.webp"
+                          alt="chairperson"
+                          className="object-cover rounded-full w-full h-full"
+                        />
+                      </button>
                       <button
                         onClick={() => setActivePerson("aaditya roshan")}
                         className="flex flex-col items-center justify-center"
@@ -156,7 +173,13 @@ const TeamPageContent = () => {
                       <button
                         onClick={() => setActivePerson("akshat gupta")}
                         className="rounded-full bg-[#d9d9d9] w-32 h-32 mb-3"
-                      ></button>
+                      >
+                        <img
+                          src="akshat gupta.webp"
+                          alt="technical head"
+                          className="object-cover rounded-full w-full h-full"
+                        />
+                      </button>
                       <button
                         onClick={() => setActivePerson("akshat gupta")}
                         className="flex flex-col items-center justify-center"
@@ -173,7 +196,13 @@ const TeamPageContent = () => {
                       <button
                         onClick={() => setActivePerson("harsh agrawal")}
                         className="rounded-full bg-[#d9d9d9] w-32 h-32 mb-3"
-                      ></button>
+                      >
+                        <img
+                          src="harsh agarwal.webp"
+                          alt="vice-chairperson"
+                          className="object-cover rounded-full w-full h-full"
+                        />
+                      </button>
                       <button
                         onClick={() => setActivePerson("harsh agrawal")}
                         className="flex flex-col items-center justify-center"
@@ -188,7 +217,13 @@ const TeamPageContent = () => {
                       <button
                         onClick={() => setActivePerson("kunal kundnani")}
                         className="rounded-full bg-[#d9d9d9] w-32 h-32 mb-3"
-                      ></button>
+                      >
+                        <img
+                          src="kunal kundnani.webp"
+                          alt="design head"
+                          className="object-cover rounded-full w-full h-full"
+                        />
+                      </button>
                       <button
                         onClick={() => setActivePerson("kunal kundnani")}
                         className="flex flex-col items-center justify-center"
@@ -203,7 +238,13 @@ const TeamPageContent = () => {
                       <button
                         onClick={() => setActivePerson("rinika paramba")}
                         className="rounded-full bg-[#d9d9d9] w-32 h-32 mb-3"
-                      ></button>
+                      >
+                        <img
+                          src="rinika paramba.webp"
+                          alt="gen sec"
+                          className="object-cover rounded-full w-full h-full"
+                        />
+                      </button>
                       <button
                         onClick={() => setActivePerson("rinika paramba")}
                         className="flex flex-col items-center justify-center"
@@ -218,7 +259,13 @@ const TeamPageContent = () => {
                       <button
                         onClick={() => setActivePerson("nischitha shetty")}
                         className="rounded-full bg-[#d9d9d9] w-32 h-32 mb-3"
-                      ></button>
+                      >
+                        <img
+                          src="nischitha shetty.webp"
+                          alt="projects & pr"
+                          className="object-cover rounded-full w-full h-full"
+                        />
+                      </button>
                       <button
                         onClick={() => setActivePerson("nischitha shetty")}
                         className="flex flex-col items-center justify-center"
@@ -227,7 +274,7 @@ const TeamPageContent = () => {
                           Nischitha Shetty
                         </span>
                         <span className="italic text-[16px]">
-                          Publicity Head
+                          Projects & Publicity Head
                         </span>
                       </button>
                     </div>
@@ -235,7 +282,13 @@ const TeamPageContent = () => {
                       <button
                         onClick={() => setActivePerson("leena kannan")}
                         className="rounded-full bg-[#d9d9d9] w-32 h-32 mb-3"
-                      ></button>
+                      >
+                        <img
+                          src="leena kannan.webp"
+                          alt="co-sec"
+                          className="object-cover rounded-full w-full h-full"
+                        />
+                      </button>
                       <button
                         onClick={() => setActivePerson("leena kannan")}
                         className="flex flex-col items-center justify-center"
@@ -250,7 +303,13 @@ const TeamPageContent = () => {
                       <button
                         onClick={() => setActivePerson("ashutosh chandra")}
                         className="rounded-full bg-[#d9d9d9] w-32 h-32 mb-3"
-                      ></button>
+                      >
+                        <img
+                          src="ashutosh chandra.webp"
+                          alt="creative head"
+                          className="object-cover rounded-full w-full h-full"
+                        />
+                      </button>
                       <button
                         onClick={() => setActivePerson("ashutosh chandra")}
                         className="flex flex-col items-center justify-center"
@@ -259,7 +318,7 @@ const TeamPageContent = () => {
                           Ashutosh Chandra
                         </span>
                         <span className="italic text-[16px]">
-                          Creativity Head
+                          Creative Head
                         </span>
                       </button>
                     </div>
@@ -267,7 +326,13 @@ const TeamPageContent = () => {
                       <button
                         onClick={() => setActivePerson("samarth shokeen")}
                         className="rounded-full bg-[#d9d9d9] w-32 h-32 mb-3"
-                      ></button>
+                      >
+                        <img
+                          src="samarth shokeen.webp"
+                          alt="events head"
+                          className="object-cover rounded-full w-full h-full"
+                        />
+                      </button>
                       <button
                         onClick={() => setActivePerson("samarth shokeen")}
                         className="flex flex-col items-center justify-center"
@@ -282,7 +347,13 @@ const TeamPageContent = () => {
                       <button
                         onClick={() => setActivePerson("yash bothra")}
                         className="rounded-full bg-[#d9d9d9] w-32 h-32 mb-3"
-                      ></button>
+                      >
+                        <img
+                          src="yash bothra.webp"
+                          alt="hr & finance"
+                          className="object-cover rounded-full w-full h-full"
+                        />
+                      </button>
                       <button
                         onClick={() => setActivePerson("yash bothra")}
                         className="flex flex-col items-center justify-center"
@@ -290,7 +361,9 @@ const TeamPageContent = () => {
                         <span className="font-medium text-[22px]">
                           Yash Bothra
                         </span>
-                        <span className="italic text-[16px]">HR Head</span>
+                        <span className="italic text-[16px]">
+                          HR & Finance Head
+                        </span>
                       </button>
                     </div>
                   </div>
@@ -326,7 +399,13 @@ const TeamPageContent = () => {
                   <button
                     onClick={() => setActivePerson("aaditya roshan")}
                     className="rounded-full bg-[#d9d9d9] w-20 h-20 mb-1.5"
-                  ></button>
+                  >
+                    <img
+                      src="aaditya roshan.webp"
+                      alt="chairperson"
+                      className="object-cover rounded-full w-full h-full"
+                    />
+                  </button>
                   <button
                     onClick={() => setActivePerson("aaditya roshan")}
                     className="flex flex-col items-center justify-center"
@@ -339,7 +418,13 @@ const TeamPageContent = () => {
                   <button
                     onClick={() => setActivePerson("rinika paramba")}
                     className="rounded-full bg-[#d9d9d9] w-20 h-20 mb-1.5"
-                  ></button>
+                  >
+                    <img
+                      src="rinika paramba.webp"
+                      alt="gen sec"
+                      className="object-cover rounded-full w-full h-full"
+                    />
+                  </button>
                   <button
                     onClick={() => setActivePerson("rinika paramba")}
                     className="flex flex-col items-center justify-center"
@@ -356,7 +441,13 @@ const TeamPageContent = () => {
                   <button
                     onClick={() => setActivePerson("samarth shokeen")}
                     className="rounded-full bg-[#d9d9d9] w-20 h-20 mb-1.5"
-                  ></button>
+                  >
+                    <img
+                      src="samarth shokeen.webp"
+                      alt="events head"
+                      className="object-cover rounded-full w-full h-full"
+                    />
+                  </button>
                   <button
                     onClick={() => setActivePerson("samarth shokeen")}
                     className="flex flex-col items-center justify-center"
@@ -369,7 +460,13 @@ const TeamPageContent = () => {
                   <button
                     onClick={() => setActivePerson("kunal kundnani")}
                     className="rounded-full bg-[#d9d9d9] w-20 h-20 mb-1.5"
-                  ></button>
+                  >
+                    <img
+                      src="kunal kundnani.webp"
+                      alt="design head"
+                      className="object-cover rounded-full w-full h-full"
+                    />
+                  </button>
                   <button
                     onClick={() => setActivePerson("kunal kundnani")}
                     className="flex flex-col items-center justify-center"
@@ -382,7 +479,13 @@ const TeamPageContent = () => {
                   <button
                     onClick={() => setActivePerson("ashutosh chandra")}
                     className="rounded-full bg-[#d9d9d9] w-20 h-20 mb-1.5"
-                  ></button>
+                  >
+                    <img
+                      src="ashutosh chandra.webp"
+                      alt="creative head"
+                      className="object-cover rounded-full w-full h-full"
+                    />
+                  </button>
                   <button
                     onClick={() => setActivePerson("ashutosh chandra")}
                     className="flex flex-col items-center justify-center"
@@ -391,7 +494,7 @@ const TeamPageContent = () => {
                       Ashutosh Chandra
                     </span>
                     <span className="italic text-[12px] mb-3">
-                      Creativity Head
+                      Creative Head
                     </span>
                   </button>
                 </div>
@@ -401,7 +504,13 @@ const TeamPageContent = () => {
                   <button
                     onClick={() => setActivePerson("harsh agrawal")}
                     className="rounded-full bg-[#d9d9d9] w-20 h-20 mb-1.5"
-                  ></button>
+                  >
+                    <img
+                      src="harsh agarwal.webp"
+                      alt="vice-chairperson"
+                      className="object-cover rounded-full w-full h-full"
+                    />
+                  </button>
                   <button
                     onClick={() => setActivePerson("harsh agrawal")}
                     className="flex flex-col items-center justify-center"
@@ -416,7 +525,13 @@ const TeamPageContent = () => {
                   <button
                     onClick={() => setActivePerson("leena kannan")}
                     className="rounded-full bg-[#d9d9d9] w-20 h-20 mb-1.5"
-                  ></button>
+                  >
+                    <img
+                      src="leena kannan.webp"
+                      alt="co-sec"
+                      className="object-cover rounded-full w-full h-full"
+                    />
+                  </button>
                   <button
                     onClick={() => setActivePerson("leena kannan")}
                     className="flex flex-col items-center justify-center"
@@ -433,7 +548,13 @@ const TeamPageContent = () => {
                   <button
                     onClick={() => setActivePerson("akshat gupta")}
                     className="rounded-full bg-[#d9d9d9] w-20 h-20 mb-1.5"
-                  ></button>
+                  >
+                    <img
+                      src="akshat gupta.webp"
+                      alt="tech head"
+                      className="object-cover rounded-full w-full h-full"
+                    />
+                  </button>
                   <button
                     onClick={() => setActivePerson("akshat gupta")}
                     className="flex flex-col items-center justify-center"
@@ -448,7 +569,13 @@ const TeamPageContent = () => {
                   <button
                     onClick={() => setActivePerson("nischitha shetty")}
                     className="rounded-full bg-[#d9d9d9] w-20 h-20 mb-1.5"
-                  ></button>
+                  >
+                    <img
+                      src="nischitha shetty.webp"
+                      alt="projects & pr"
+                      className="object-cover rounded-full w-full h-full"
+                    />
+                  </button>
                   <button
                     onClick={() => setActivePerson("nischitha shetty")}
                     className="flex flex-col items-center justify-center"
@@ -457,7 +584,7 @@ const TeamPageContent = () => {
                       Nischitha Shetty
                     </span>
                     <span className="italic text-[12px] mb-3">
-                      Publicity Head
+                      Projects & Publicity Head
                     </span>
                   </button>
                 </div>
@@ -465,13 +592,21 @@ const TeamPageContent = () => {
                   <button
                     onClick={() => setActivePerson("yash bothra")}
                     className="rounded-full bg-[#d9d9d9] w-20 h-20 mb-1.5"
-                  ></button>
+                  >
+                    <img
+                      src="yash bothra.webp"
+                      alt="hr & finance"
+                      className="object-cover rounded-full w-full h-full"
+                    />
+                  </button>
                   <button
                     onClick={() => setActivePerson("yash bothra")}
                     className="flex flex-col items-center justify-center"
                   >
                     <span className="font-medium text-[16px]">Yash Bothra</span>
-                    <span className="italic text-[12px] mb-3">HR Head</span>
+                    <span className="italic text-[12px] mb-3">
+                      HR & Finance Head
+                    </span>
                   </button>
                 </div>
               </div>
@@ -492,24 +627,24 @@ const TeamPageContent = () => {
               onAnimationComplete={() => setIsAnimating(false)}
               className="overflow-auto poppins absolute sm:top-0 inset-0 bg-black bg-opacity-[0.865] z-50 flex items-center justify-center"
             >
-              <div className="mt-0 sm:mt-20 flex flex-col items-center justify-between sm:justify-center bg-transparent h-2/3 w-4/5 z-50 text-center relative">
+              <div className="-mt-32 sm:mt-20 flex flex-col items-center justify-between sm:justify-center bg-transparent h-2/3 w-4/5 z-50 text-center relative">
                 <div className="w-full">
-                  <button className="pointer-events-none cursor-none rounded-full bg-[#d9d9d9] w-60 h-60 sm:w-52 sm:h-52 sm:mb-3 mb-8">
+                  <button className="mt-10 pointer-events-none cursor-none rounded-full bg-[#d9d9d9] w-60 h-60 sm:w-52 sm:h-52 sm:mb-3 mb-8">
                     <img
-                      src={personImage}
+                      src={person.img}
                       alt="board member"
-                      className="object-cover"
+                      className="object-cover rounded-full w-full h-full"
                     />
                   </button>
-                  <h2 className="text-6xl font-bold sm:mb-4 mb-0 text-white">
+                  <h2 className="text-6xl font-bold sm:mb-2 mb-0 text-white">
                     {person.name}
                   </h2>
                 </div>
 
-                <h3 className="text-3xl sm:mt-3 mt-2 sm:mb-4 mb-3 text-white italic">
+                <h3 className="text-3xl sm:mt-0 mt-2 sm:mb-0 mb-3 text-white italic">
                   {person.role}
                 </h3>
-                <p className="sm:mt-6 mt-0 text-pretty text-[#9cebdb] text-xl">
+                <p className="sm:mt-3 sm:mb-5 mt-0 text-pretty text-[#9cebdb] text-xl">
                   {person.desc}
                 </p>
                 <a
@@ -522,8 +657,8 @@ const TeamPageContent = () => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
-                      width="22"
-                      height="22"
+                      width="28"
+                      height="28"
                       color="#ffffff"
                       fill="none"
                     >
@@ -545,7 +680,6 @@ const TeamPageContent = () => {
                       />
                     </svg>
                   </div>
-                  {/* <span className="text-3xl text-white mt-3">Linkedin</span> */}
                 </a>
               </div>
             </motion.div>

@@ -537,6 +537,102 @@ const WrappedPage = () => {
           </div>
         ) : currentPart === 2 ? (
           <div
+            key="part6"
+            className="overflow-hidden bg-black text-white dm-sans min-h-screen min-w-screen flex flex-col items-center justify-center leading-none relative"
+          >
+            {images11.map((img, index) => (
+              <motion.img
+                key={index}
+                src={img.src}
+                alt={`Rectangle ${53 + index}`}
+                className={`absolute ${img.zIndex} ${img.top} ${img.left}`}
+                initial={{ y: -1000, rotate: -90 }}
+                animate={{ y: 0, rotate: 0 }}
+                exit={{ y: -1000, rotate: -90 }}
+                transition={{
+                  duration: 0.85,
+                  delay: img.delay,
+                  ease: easeInOut,
+                }}
+              />
+            ))}
+            <motion.span
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.3, ease: easeInOut }}
+              exit={{ opacity: 0, y: 20 }}
+              className="sm:text-[6rem] text-[5rem] font-[700] z-40 text-center"
+            >
+              100+
+            </motion.span>
+            <motion.span
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+              initial={{ y: -30, opacity: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.6, ease: easeInOut }}
+              exit={{ opacity: 0, y: 30 }}
+              className="sm:text-[4rem] text-[3rem] font-[700] z-40 text-center"
+            >
+              participants
+            </motion.span>
+            <motion.span
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+              initial={{ y: -40, opacity: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.9, ease: easeInOut }}
+              exit={{ opacity: 0, y: 40 }}
+              className="sm:text-[4rem] text-[3rem] font-[700] z-40 text-center mt-4"
+            >
+              created over 25 websites during Yantra'24
+            </motion.span>
+            {images12.map((img, index) => (
+              <motion.img
+                key={index}
+                src={img.src}
+                alt={`Rectangle ${53 + index}`}
+                className={`absolute ${img.zIndex} ${img.bottom} ${img.right}`}
+                initial={{ y: 1000, rotate: -90 }}
+                animate={{ y: 0, rotate: 0 }}
+                exit={{ y: 1000, rotate: -90 }}
+                transition={{
+                  duration: 0.85,
+                  delay: img.delay,
+                  ease: easeInOut,
+                }}
+              />
+            ))}
+            {isPaused && (
+              <div className="z-50 absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
+                Paused
+              </div>
+            )}
+            <button
+              className="z-50 absolute bottom-4 left-4 bg-white text-black text-xl px-3 py-1 rounded-full"
+              onClick={handlePrev}
+              disabled={currentPart === 1}
+            >
+              Previous
+            </button>
+            <button
+              className="z-50 absolute bottom-4 right-4 bg-white text-black text-xl px-3 py-1 rounded-full"
+              onClick={handleNext}
+              disabled={currentPart === 7}
+            >
+              Next
+            </button>
+          </div>
+        ) : currentPart === 3 ? (
+          <div
             key="part2"
             className="overflow-hidden bg-black text-white dm-sans min-h-screen min-w-screen flex flex-col items-center justify-center leading-none relative"
           >
@@ -565,9 +661,9 @@ const WrappedPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3, ease: easeInOut }}
               exit={{ opacity: 0, y: 20 }}
-              className="z-50 sm:text-[5.5rem] text-[4.5rem] font-[700]"
+              className="z-50 sm:text-[6rem] text-[4.5rem] font-[700]"
             >
-              360
+              150+
             </motion.span>
             <motion.span
               onMouseEnter={handleMouseEnter}
@@ -578,9 +674,9 @@ const WrappedPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.5, ease: easeInOut }}
               exit={{ opacity: 0, y: 30 }}
-              className="z-50 sm:text-[3.5rem] text-[3rem] font-[700] text-center"
+              className="z-50 sm:text-[4rem] text-[3rem] font-[700] text-center"
             >
-              Students participated
+              students participated
             </motion.span>
             <motion.span
               onMouseEnter={handleMouseEnter}
@@ -591,7 +687,7 @@ const WrappedPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.7, ease: easeInOut }}
               exit={{ opacity: 0, y: 40 }}
-              className="z-50 sm:text-[3.5rem] text-[3rem] font-[700] text-center"
+              className="z-50 sm:text-[4rem] text-[3rem] font-[700] text-center"
             >
               in our events in Riviera'24
             </motion.span>
@@ -631,202 +727,7 @@ const WrappedPage = () => {
               Next
             </button>
           </div>
-        ) : currentPart === 3 ? (
-          <div
-            key="part3"
-            className="overflow-hidden bg-black text-white dm-sans min-h-screen min-w-screen flex flex-col items-center justify-center leading-none relative"
-          >
-            {images3.map((img, index) => (
-              <motion.img
-                key={index}
-                src={img.src}
-                alt={`Rectangle ${40 + index}`}
-                className={`absolute ${img.zIndex} ${img.left} ${img.top}`}
-                initial={{ y: -1000, rotate: -90 }}
-                animate={{ y: 0, rotate: 0 }}
-                exit={{ y: -1000, rotate: -90 }}
-                transition={{
-                  duration: 0.85,
-                  delay: img.delay,
-                  ease: easeInOut,
-                }}
-              />
-            ))}
-            <motion.span
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              onTouchStart={handleTouchStart}
-              onTouchEnd={handleTouchEnd}
-              initial={{ y: -30, opacity: 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.3, ease: easeInOut }}
-              exit={{ opacity: 0, y: 30 }}
-              className="sm:text-[4rem] text-[3rem] font-[700] z-40 text-center"
-            >
-              Do we only ideate? <br className="sm:hidden visible" /> Nahh!
-            </motion.span>
-            <br className="sm:hidden visible" />
-            <motion.span
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              onTouchStart={handleTouchStart}
-              onTouchEnd={handleTouchEnd}
-              initial={{ y: -30, opacity: 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.5, ease: easeInOut }}
-              exit={{ opacity: 0, y: 30 }}
-              className="sm:text-[4rem] text-[2.5rem] font-[700] z-40 text-center"
-            >
-              We had 93 days of night slips
-            </motion.span>
-            <motion.span
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              onTouchStart={handleTouchStart}
-              onTouchEnd={handleTouchEnd}
-              initial={{ y: -40, opacity: 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.7, ease: easeInOut }}
-              exit={{ opacity: 0, y: 40 }}
-              className="sm:text-[4rem] text-[2.5rem] font-[700] z-40 text-center"
-            >
-              with infinite amount of fun!
-            </motion.span>
-            {images4.map((img, index) => (
-              <motion.img
-                key={index}
-                src={img.src}
-                alt={`Rectangle ${28 + index}`}
-                className={`absolute ${img.zIndex} ${img.right} ${img.bottom}`}
-                initial={{ y: 1200, rotate: 90 }}
-                animate={{ y: 0, rotate: 180 }}
-                exit={{ y: 1200, rotate: 90 }}
-                transition={{
-                  duration: 0.85,
-                  delay: img.delay,
-                  ease: easeInOut,
-                }}
-              />
-            ))}
-            {isPaused && (
-              <div className="z-50 absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
-                Paused
-              </div>
-            )}
-            <button
-              className="z-50 absolute bottom-4 left-4 bg-white text-black text-xl px-3 py-1 rounded-full"
-              onClick={handlePrev}
-              disabled={currentPart === 1}
-            >
-              Previous
-            </button>
-            <button
-              className="z-50 absolute bottom-4 right-4 bg-white text-black text-xl px-3 py-1 rounded-full"
-              onClick={handleNext}
-              disabled={currentPart === 7}
-            >
-              Next
-            </button>
-          </div>
         ) : currentPart === 4 ? (
-          <div
-            key="part4"
-            className="overflow-hidden bg-black text-white dm-sans min-h-screen min-w-screen flex flex-col items-center justify-center leading-none relative"
-          >
-            {images5.map((img, index) => (
-              <motion.img
-                key={index}
-                src={img.src}
-                alt={`Rectangle ${53 + index}`}
-                className={`absolute ${img.zIndex} ${img.top} ${img.left}`}
-                initial={{ y: -600, rotate: 30 }}
-                animate={{ y: 0, rotate: 0 }}
-                exit={{ y: -600, rotate: 30 }}
-                transition={{
-                  duration: 0.85,
-                  delay: img.delay,
-                  ease: easeInOut,
-                }}
-              />
-            ))}
-            <motion.span
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              onTouchStart={handleTouchStart}
-              onTouchEnd={handleTouchEnd}
-              initial={{ y: -20, opacity: 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.3, ease: easeInOut }}
-              exit={{ opacity: 0, y: 20 }}
-              className="sm:text-[4rem] text-[3rem] font-[700] z-40 text-center"
-            >
-              <span className="sm:text-[5rem] text-[3.5rem]">9</span> expos
-            </motion.span>
-            <motion.span
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              onTouchStart={handleTouchStart}
-              onTouchEnd={handleTouchEnd}
-              initial={{ y: -30, opacity: 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.55, ease: easeInOut }}
-              exit={{ opacity: 0, y: 30 }}
-              className="sm:text-[4rem] text-[3rem] font-[700] z-40 text-center"
-            >
-              <span className="sm:text-[5rem] text-[3.5rem]">36</span> hours of
-              pitching
-            </motion.span>
-            <motion.span
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              onTouchStart={handleTouchStart}
-              onTouchEnd={handleTouchEnd}
-              initial={{ y: -40, opacity: 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.75, ease: easeInOut }}
-              exit={{ opacity: 0, y: 40 }}
-              className="sm:text-[4rem] text-[3rem] font-[700] z-40 text-center"
-            >
-              <span className="sm:text-[5rem] text-[3.5rem]">930+</span>{" "}
-              followers on Instagram
-            </motion.span>
-            {images6.map((img, index) => (
-              <motion.img
-                key={index}
-                src={img.src}
-                alt={`Rectangle ${53 + index}`}
-                className={`absolute ${img.zIndex} ${img.bottom} ${img.right}`}
-                initial={{ y: 600, rotate: 210 }}
-                animate={{ y: 0, rotate: 180 }}
-                exit={{ y: 600, rotate: 210 }}
-                transition={{
-                  duration: 0.85,
-                  delay: img.delay,
-                  ease: easeInOut,
-                }}
-              />
-            ))}
-            {isPaused && (
-              <div className="z-50 absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
-                Paused
-              </div>
-            )}
-            <button
-              className="z-50 absolute bottom-4 left-4 bg-white text-black text-xl px-3 py-1 rounded-full"
-              onClick={handlePrev}
-              disabled={currentPart === 1}
-            >
-              Previous
-            </button>
-            <button
-              className="z-50 absolute bottom-4 right-4 bg-white text-black text-xl px-3 py-1 rounded-full"
-              onClick={handleNext}
-              disabled={currentPart === 7}
-            >
-              Next
-            </button>
-          </div>
-        ) : currentPart === 5 ? (
           <div
             key="part5"
             className="overflow-hidden bg-black text-white dm-sans min-h-screen min-w-screen flex flex-col items-center justify-center leading-none relative"
@@ -874,7 +775,7 @@ const WrappedPage = () => {
               exit={{ opacity: 0, y: 20 }}
               className="sm:text-[6rem] text-[5rem] font-[700] z-40 text-center"
             >
-              360
+              120+
             </motion.span>
             <motion.span
               onMouseEnter={handleMouseEnter}
@@ -887,7 +788,7 @@ const WrappedPage = () => {
               exit={{ opacity: 0, y: 30 }}
               className="sm:text-[4rem] text-[3rem] font-[700] z-40 text-center"
             >
-              Students participated
+              math enthusiasts participated
             </motion.span>
             <motion.span
               onMouseEnter={handleMouseEnter}
@@ -900,7 +801,7 @@ const WrappedPage = () => {
               exit={{ opacity: 0, y: 40 }}
               className="sm:text-[4rem] text-[3rem] font-[700] z-40 text-center"
             >
-              in our events in Gravitas'24
+              in our flagship event MPL during Gravitas'24
             </motion.span>
             {images9.map((img, index) => (
               <motion.img
@@ -954,20 +855,20 @@ const WrappedPage = () => {
               Next
             </button>
           </div>
-        ) : currentPart === 6 ? (
+        ) : currentPart === 5 ? (
           <div
-            key="part6"
+            key="part4"
             className="overflow-hidden bg-black text-white dm-sans min-h-screen min-w-screen flex flex-col items-center justify-center leading-none relative"
           >
-            {images11.map((img, index) => (
+            {images5.map((img, index) => (
               <motion.img
                 key={index}
                 src={img.src}
                 alt={`Rectangle ${53 + index}`}
                 className={`absolute ${img.zIndex} ${img.top} ${img.left}`}
-                initial={{ y: -1000, rotate: -90 }}
+                initial={{ y: -600, rotate: 30 }}
                 animate={{ y: 0, rotate: 0 }}
-                exit={{ y: -1000, rotate: -90 }}
+                exit={{ y: -600, rotate: 30 }}
                 transition={{
                   duration: 0.85,
                   delay: img.delay,
@@ -984,9 +885,9 @@ const WrappedPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3, ease: easeInOut }}
               exit={{ opacity: 0, y: 20 }}
-              className="sm:text-[6rem] text-[5rem] font-[700] z-40 text-center"
+              className="sm:text-[4rem] text-[3rem] font-[700] z-40 text-center"
             >
-              360
+              <span className="sm:text-[5rem] text-[3.5rem]">9</span> expos
             </motion.span>
             <motion.span
               onMouseEnter={handleMouseEnter}
@@ -995,11 +896,12 @@ const WrappedPage = () => {
               onTouchEnd={handleTouchEnd}
               initial={{ y: -30, opacity: 0 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.6, ease: easeInOut }}
+              transition={{ duration: 0.4, delay: 0.55, ease: easeInOut }}
               exit={{ opacity: 0, y: 30 }}
               className="sm:text-[4rem] text-[3rem] font-[700] z-40 text-center"
             >
-              Students participated
+              <span className="sm:text-[5rem] text-[3.5rem]">40+</span> hours of
+              pitching
             </motion.span>
             <motion.span
               onMouseEnter={handleMouseEnter}
@@ -1008,21 +910,121 @@ const WrappedPage = () => {
               onTouchEnd={handleTouchEnd}
               initial={{ y: -40, opacity: 0 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.9, ease: easeInOut }}
+              transition={{ duration: 0.4, delay: 0.75, ease: easeInOut }}
               exit={{ opacity: 0, y: 40 }}
               className="sm:text-[4rem] text-[3rem] font-[700] z-40 text-center"
             >
-              in our events in Yantra'24
+              <span className="sm:text-[5rem] text-[3.5rem]">1.4k+</span>{" "}
+              followers on Instagram
             </motion.span>
-            {images12.map((img, index) => (
+            {images6.map((img, index) => (
               <motion.img
                 key={index}
                 src={img.src}
                 alt={`Rectangle ${53 + index}`}
                 className={`absolute ${img.zIndex} ${img.bottom} ${img.right}`}
-                initial={{ y: 1000, rotate: -90 }}
+                initial={{ y: 600, rotate: 210 }}
+                animate={{ y: 0, rotate: 180 }}
+                exit={{ y: 600, rotate: 210 }}
+                transition={{
+                  duration: 0.85,
+                  delay: img.delay,
+                  ease: easeInOut,
+                }}
+              />
+            ))}
+            {isPaused && (
+              <div className="z-50 absolute top-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full">
+                Paused
+              </div>
+            )}
+            <button
+              className="z-50 absolute bottom-4 left-4 bg-white text-black text-xl px-3 py-1 rounded-full"
+              onClick={handlePrev}
+              disabled={currentPart === 1}
+            >
+              Previous
+            </button>
+            <button
+              className="z-50 absolute bottom-4 right-4 bg-white text-black text-xl px-3 py-1 rounded-full"
+              onClick={handleNext}
+              disabled={currentPart === 7}
+            >
+              Next
+            </button>
+          </div>
+        ) : currentPart === 6 ? (
+          <div
+            key="part3"
+            className="overflow-hidden bg-black text-white dm-sans min-h-screen min-w-screen flex flex-col items-center justify-center leading-none relative"
+          >
+            {images3.map((img, index) => (
+              <motion.img
+                key={index}
+                src={img.src}
+                alt={`Rectangle ${40 + index}`}
+                className={`absolute ${img.zIndex} ${img.left} ${img.top}`}
+                initial={{ y: -1000, rotate: -90 }}
                 animate={{ y: 0, rotate: 0 }}
-                exit={{ y: 1000, rotate: -90 }}
+                exit={{ y: -1000, rotate: -90 }}
+                transition={{
+                  duration: 0.85,
+                  delay: img.delay,
+                  ease: easeInOut,
+                }}
+              />
+            ))}
+            <motion.span
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+              initial={{ y: -30, opacity: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.3, ease: easeInOut }}
+              exit={{ opacity: 0, y: 30 }}
+              className="sm:text-[3.5rem] text-[3rem] font-[700] z-40 text-center"
+            >
+              Think SIAM strives for productivity alone?{" "}
+              <br className="sm:hidden visible" /> Think again!
+            </motion.span>
+            <br className="sm:hidden visible" />
+            <motion.span
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+              initial={{ y: -30, opacity: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.5, ease: easeInOut }}
+              exit={{ opacity: 0, y: 30 }}
+              className="sm:text-[3.5rem] text-[2.5rem] font-[700] z-40 text-center"
+            >
+              We had 50+ night slips
+            </motion.span>
+            <motion.span
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+              initial={{ y: -40, opacity: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.7, ease: easeInOut }}
+              exit={{ opacity: 0, y: 40 }}
+              className="sm:text-[3.5rem] text-[2.5rem] font-[700] z-40 text-center"
+            >
+              with more than 60 hours of impromptu dancing <br /> and infinite
+              amount of fun!
+            </motion.span>
+            {images4.map((img, index) => (
+              <motion.img
+                key={index}
+                src={img.src}
+                alt={`Rectangle ${28 + index}`}
+                className={`absolute ${img.zIndex} ${img.right} ${img.bottom}`}
+                initial={{ y: 1200, rotate: 90 }}
+                animate={{ y: 0, rotate: 180 }}
+                exit={{ y: 1200, rotate: 90 }}
                 transition={{
                   duration: 0.85,
                   delay: img.delay,
@@ -1112,7 +1114,7 @@ const WrappedPage = () => {
             >
               <Link to="/">
                 <button className="mb-7 sm:mt-10 mt-5 uppercase rounded-full sm:py-1.5 py-1 sm:px-3 px-2.5 font-bold text-[#f9f9f9] bg-gradient-to-r from-[#1CBAFF] via-[#4f76f5] to-[#6366FD] shadow-[0px_4px_51px_#6564FD]">
-                  <span className="[text-shadow:_0_2px_4px_rgb(000_000_000_/0.65)] sm:text-[22px] text-[26px]">
+                  <span className="[text-shadow:_0_2px_4px_rgb(000_000_000_/0.65)] text-[26px]">
                     Back to main page
                   </span>
                 </button>

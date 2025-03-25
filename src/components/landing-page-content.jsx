@@ -3,10 +3,23 @@ import { easeInOut, motion } from "framer-motion";
 import Navbar from "./navbar";
 import { Link } from "react-router-dom";
 
+const images = [
+  "slide1.jpeg",
+  "slide2.jpeg",
+  "slide3.jpeg",
+  "slide4.jpeg",
+  "slide5.jpeg",
+  "slide6.jpeg",
+  "slide7.jpeg",
+  "slide8.jpeg",
+  "slide9.jpeg",
+];
+
 const LandingPageContent = () => {
   const [hasAnimatedLanding, setHasAnimatedLanding] = useState(
     JSON.parse(sessionStorage.getItem("hasAnimatedLanding")) || false
   );
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [transition] = useState(() => {
     if (sessionStorage.getItem("hasAnimatedLanding") === "true") {
       return {
@@ -21,13 +34,21 @@ const LandingPageContent = () => {
       };
     }
   });
-
   useEffect(() => {
     if (sessionStorage.getItem("hasAnimatedLanding") !== "true") {
       sessionStorage.setItem("hasAnimatedLanding", "true");
       setHasAnimatedLanding(true);
     }
   }, [hasAnimatedLanding]);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3750);
+    return () => clearTimeout(timeout);
+  }, [currentIndex]);
+
   return (
     <motion.div
       className="poppins sm:w-full sm:h-full max-w-screen sm:min-h-screen min-h-screen z-[999]"
@@ -62,7 +83,21 @@ const LandingPageContent = () => {
         </div>
         <div className="sm:w-[45%] w-full sm:block hidden">
           <div className="sm:mt-10 sm:ml-6 ml-16 mt-[3.25rem] z-10 rounded-full sm:py-[2.05rem] py-[1rem] sm:w-[42rem] sm:h-[42rem] w-[25rem] h-[25rem] bg-gradient-to-r from-[#4DA8EA] to-[#00D856]">
-            <div className="rounded-full bg-white sm:w-[38rem] sm:h-[38rem] w-[23rem] h-[23rem] mx-auto"></div>
+            <div className="relative rounded-full bg-white sm:w-[38rem] sm:h-[38rem] w-[23rem] h-[23rem] mx-auto overflow-hidden">
+              {images.map((src, index) => (
+                <motion.img
+                  key={index}
+                  src={src}
+                  alt={`slide${index + 1}`}
+                  className={`absolute w-full h-full object-cover rounded-full ${
+                    index === currentIndex ? "z-10" : "z-0"
+                  }`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: index === currentIndex ? 1 : 0 }}
+                  transition={{ duration: 1 }}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>

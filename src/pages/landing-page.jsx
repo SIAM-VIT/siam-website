@@ -15,7 +15,7 @@ const LandingPage = () => {
         setIsLoaded(true);
         setHasAnimated(false);
         sessionStorage.setItem("hasAnimated", JSON.stringify(true));
-      }, 5000);
+      }, 4250);
       return () => clearTimeout(timer);
     } else {
       setIsLoaded(true);
