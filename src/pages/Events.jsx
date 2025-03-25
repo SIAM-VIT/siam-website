@@ -367,7 +367,7 @@ export default function Events() {
                   <div className="lg:w-3/5 sm:w-1/2 h-full grid grid-cols-2 grid-rows-2 justify-items-center content-center">
                     <div className="flex justify-center items-center">
                       <img
-                        src="yantraEvent2.jpg"
+                        src="yantraEvent2.jpeg"
                         alt="codingrelay"
                         className="w-full h-full object-cover"
                       />
