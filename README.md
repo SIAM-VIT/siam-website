@@ -11,7 +11,6 @@
 </div>
 
 <!-- TABLE OF CONTENTS -->
-
 ## Table of Contents
 
 - [About The Project](#about-the-project)
