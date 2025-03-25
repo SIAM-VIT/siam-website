@@ -163,7 +163,7 @@ export default function Events() {
               />
               <button
                 onClick={handleBackToLanding}
-                className={`sm:w-[75px] sm:h-[75px] h-[50px] w-[50px] flex items-center justify-center absolute left-10 sm:bottom-10 bottom-32 rounded-[15px] sm:rounded-[25px] bg-gradient-to-r from-[#4DA8EA] to-[#00D856]`}
+                className={`sm:w-[75px] sm:h-[75px] h-[50px] w-[50px] flex items-center justify-center absolute left-10 sm:bottom-10 bottom-10 rounded-[15px] sm:rounded-[25px] bg-gradient-to-r from-[#4DA8EA] to-[#00D856]`}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
