@@ -69,7 +69,7 @@ export default function Events() {
               transition={pageTransition}
               className="min-h-screen flex flex-col sm:flex-row items-center relative justify-center gap-y-20 pl-5 -mt-10"
             >
-              <div className="text-left sm:mt-0 -mt-48">
+              <div className="text-left sm:mt-0 -mt-40">
                 <h1 className="uppercase text-white font-bold text-[48px] sm:text-[84px] sm:mb-10 mb-5 leading-none">
                   Discover Our Events
                 </h1>
@@ -384,8 +384,8 @@ export default function Events() {
                     </div>
                     <div className="flex justify-center items-center">
                       <img
-                        src="yantraEvent1.jpg"
-                        alt="codingrelay"
+                        src="yantraEvent1.jpeg"
+                        alt="blogathon"
                         className="w-full h-full object-cover"
                       />
                     </div>
