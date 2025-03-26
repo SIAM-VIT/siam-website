@@ -62,7 +62,7 @@ const TeamPageContent = () => {
     {
       name: "Kunal Kundnani",
       role: "Design Head",
-      desc: "If SIAM had a face of creativity, it would undoubtedly be Kunal Kundnani! With his amazing design skills, sharp aesthetics and out-of-the-box creativity, he made every project look outstanding. From stunning event posters to stylish social media designs, his work spoke volumes, making SIAM VIT’s visual identity stand out effortlessly. But Kunal wasn’t just about pixels and palettes-he is also the heart of the team! His fun-loving, approachable and ever-helpful nature made working with him an absolute delight. Whether it was brainstorming ideas, guiding juniors or simply cracking jokes to keep the vibe light, he ensured that creativity always flowed without pressure. His efforts and creativity have left a lasting impact and his energy and passion will always be an inspiration.",
+      desc: "If SIAM had a face of creativity, it would undoubtedly be Kunal Kundnani! With his amazing design skills, sharp aesthetics and out-of-the-box creativity, he made every project look outstanding. From stunning event posters to stylish social media designs, his work spoke volumes, making SIAM VIT’s visual identity stand out effortlessly. But Kunal wasn’t just about pixels and palettes-he is also the heart of the team! His fun-loving, approachable and ever-helpful nature made working with him an absolute delight. Whether it was brainstorming ideas, guiding juniors or simply cracking jokes to keep the vibe light, he ensured that creativity always flowed without pressure.",
       img: "kunal kundnani.webp",
       linkedin: "https://www.linkedin.com/in/kunal-kundnani-452288274/",
     },

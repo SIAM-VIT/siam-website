@@ -122,7 +122,7 @@ export default function Events() {
               <motion.h1 className="uppercase text-center text-white font-bold text-[64px] sm:text-[68px] sm:ml-12 sm:mb-10 sm:mt-32 mt-8 leading-none">
                 What we do?
               </motion.h1>
-              <motion.h2 className="text-center text-white text-xl font-bold p-5 m-5">
+              <motion.h2 className="text-center text-white text-xl font-bold px-12 m-5">
                 SIAM thrives on blending innovation and creativity by organizing
                 diverse events during cultural and tech fests. From interactive
                 workshops and coding challenges to tech exhibitions and fun
@@ -163,7 +163,7 @@ export default function Events() {
               />
               <button
                 onClick={handleBackToLanding}
-                className={`sm:w-[75px] sm:h-[75px] h-[50px] w-[50px] flex items-center justify-center absolute left-10 sm:bottom-10 bottom-10 rounded-[15px] sm:rounded-[25px] bg-gradient-to-r from-[#4DA8EA] to-[#00D856]`}
+                className={`sm:w-[75px] sm:h-[75px] h-[50px] w-[50px] flex items-center justify-center absolute left-10 sm:bottom-10 bottom-0 rounded-[15px] sm:rounded-[25px] bg-gradient-to-r from-[#4DA8EA] to-[#00D856]`}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
