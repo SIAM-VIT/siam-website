@@ -11,6 +11,7 @@
 </div>
 
 <!-- TABLE OF CONTENTS -->
+
 ## Table of Contents
 
 - [About The Project](#about-the-project)
@@ -19,8 +20,6 @@
 - [Available Scripts](#installation)
 - [Contributors](#contributors)
 - [License](#license)
-
-
 
 ## Website
 
@@ -81,7 +80,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 	
 	<!-- <tr align="center" style="font-weight:bold">
 		<td>
-		Rishab Nagwani
+		Rishab Nagwani yo
 		<p align="center">
 			<img src = "https://avatars.githubusercontent.com/u/137005853?v=4.png" width="150" height="150" alt="Rishab Nagwani">
 		</p>
@@ -111,12 +110,12 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 Distributed under the MIT License. See LICENSE for more information.
 
-
 <p align="center">
 	Made with :heart: by SIAM-VIT.
 </p>
 
 ## 🔄 Sync Log
+
 <!-- SYNC-LOG -->
 <!-- SYNC-LOG-END -->
 <!-- 2025-03-10 13:40:56 UTC: Synced with upstream by GitHub Actions bot -->
