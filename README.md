@@ -80,7 +80,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 	
 	<!-- <tr align="center" style="font-weight:bold">
 		<td>
-		Rishab Nagwani yo
+		Rishab Nagwani
 		<p align="center">
 			<img src = "https://avatars.githubusercontent.com/u/137005853?v=4.png" width="150" height="150" alt="Rishab Nagwani">
 		</p>
